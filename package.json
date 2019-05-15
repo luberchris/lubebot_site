@@ -6,6 +6,10 @@
   "scripts": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luberchris/lubebot.git"
+  },
   "keywords": [
     "lube",
     "luber",
@@ -19,5 +23,10 @@
   "bugs": {
     "url": "https://github.com/luberchris/lubebot/issues"
   },
-  "homepage": "https://github.com/luberchris/lubebot#readme"
+  "homepage": "https://github.com/luberchris/lubebot#readme",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "nodemon": "^1.19.0",
+    "tmi.js": "^1.4.2"
+  }
 }
