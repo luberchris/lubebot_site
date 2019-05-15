@@ -1,0 +1,23 @@
+{
+  "name": "lubebot",
+  "version": "1.0.0",
+  "description": "Twitch chatbot for Lubesy",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "lube",
+    "luber",
+    "lubebot",
+    "chatbot",
+    "twitch",
+    "streaming"
+  ],
+  "author": "Christopher D Luber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luberchris/lubebot/issues"
+  },
+  "homepage": "https://github.com/luberchris/lubebot#readme"
+}
