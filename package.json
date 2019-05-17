@@ -26,7 +26,6 @@
   "homepage": "https://github.com/luberchris/lubebot#readme",
   "dependencies": {
     "dotenv": "^8.0.0",
-    "nodemon": "^1.19.0",
     "tmi.js": "^1.4.2"
   }
 }
