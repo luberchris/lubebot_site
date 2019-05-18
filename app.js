@@ -1,7 +1,13 @@
 const tmi = require("tmi.js");
+const _ = require("lodash");
 require("dotenv").config();
 
 //////////////////Global Variables////////////////////
+
+let yesCount = 0;
+let noCount = 0;
+
+// const drink = new Audio("./assets/sounds/ice_cubes.mp3");
 
 const insults = [
   "lil bitch",
@@ -18,17 +24,67 @@ const convertSeconds = seconds => {
   return minutes + " minutes and " + remainder + " seconds";
 };
 
-const removeHash = user => {
-  if (user.charAt(0) === "#") {
-    return (
-      user
-        .substr(1, user.length)
-        .charAt(0)
-        .toUpperCase() + user.substr(2, user.length)
+const getRandomInt = max => {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
+const getVotes = channel => {
+  yesCount = 0;
+  noCount = 0;
+  client.action(
+    channel,
+    "30 seconds: #yes to make Luber take a shot, #no otherwise"
+  );
+  setTimeout(() => {
+    client.action(
+      channel,
+      "15 seconds left!!! #yes to make Luber take a shot!"
     );
-  } else {
-    return user.charAt(0).toUpperCase() + user.slice(1);
+  }, 15000);
+  var promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      if (yesCount > noCount || yesCount === noCount) {
+        resolve(true);
+      } else {
+        resolve(false);
+      }
+    }, 30000);
+  });
+  return promise;
+};
+
+//Props to unicorn_dev for the code and the tutoring - I'm drunk
+const gridPrint = (strang, channel, user) => {
+  const messageParts = strang.split(" ");
+  const messageLengthParts = messageParts.length;
+  let repeated = messageParts.slice(1, messageLengthParts - 2).join(" ");
+
+  if (messageLengthParts === 2) {
+    repeated = messageParts[1];
   }
+
+  let width = messageParts[strang.split(" ").length - 2];
+  let height = messageParts[strang.split(" ").length - 1];
+
+  if ((messageLengthParts >= 3 && isNaN(height)) || messageLengthParts < 3) {
+    height = 1;
+  }
+
+  if ((messageLengthParts >= 4 && isNaN(width)) || messageLengthParts < 4) {
+    width = 1;
+  }
+  
+  const emoteArray = [];
+
+  _.each(_.times(Number(width)), line => {
+    emoteArray.push(repeated);
+  });
+
+  console.log(emoteArray.join(" "))
+
+  _.each(_.times(Number(height)), line => {
+    client.say(removeHash(channel), emoteArray.join(" "));
+  });
 };
 
 const mock = message => {
@@ -43,8 +99,17 @@ const mock = message => {
   return newString;
 };
 
-const getRandomInt = max => {
-  return Math.floor(Math.random() * Math.floor(max));
+const removeHash = user => {
+  if (user.charAt(0) === "#") {
+    return (
+      user
+        .substr(1, user.length)
+        .charAt(0)
+        .toUpperCase() + user.substr(2, user.length)
+    );
+  } else {
+    return user.charAt(0).toUpperCase() + user.slice(1);
+  }
 };
 
 //////////////////Twitch Connection Options////////////////////
@@ -123,6 +188,41 @@ client.on("chat", (channel, user, message, self) => {
   switch (message.split(" ").length) {
     case 1:
       switch (message) {
+        case "!damnitgary":
+          client.action(removeHash(channel), "God fucking dammit");
+          break;
+        case "!drink":
+          client.action(
+            removeHash(channel),
+            removeHash(channel) + " you better DRINK"
+          );
+          break;
+        case "!gaytest":
+          client.action(removeHash(channel), "gaytest filler");
+        // Figure out how to make sounds play
+        // drink.play();
+        case "!mods":
+          client.mods(removeHash(channel)).then(mods => {
+            client.action(removeHash(channel), "Mods: " + mods);
+          });
+          break;
+        case "!shot":
+          getVotes(removeHash(channel)).then(done => {
+            client.action(
+              removeHash(channel),
+              done
+                ? "Take a shot, honey"
+                : "You don't need to take a shot right now, honey"
+            );
+          });
+          break;
+        case "!stairs":
+          //Add soundbyte of Eddy
+          client.action(
+            removeHash(channel),
+            "NotLikeThis NotLikeThis NotLikeThis WHAT HAPPENED TO THE STAIRS?? NotLikeThis NotLikeThis NotLikeThis "
+          );
+          break;
         case "!twitter":
           client.action(
             removeHash(channel),
@@ -135,15 +235,11 @@ client.on("chat", (channel, user, message, self) => {
             "Here's Chris's website: http://chrisluber.com"
           );
           break;
-        case "!stairs":
-          //Add soundbyte of Eddy
-          client.action(
-            removeHash(channel),
-            "NotLikeThis NotLikeThis NotLikeThis WHAT HAPPENED TO THE STAIRS?? NotLikeThis NotLikeThis NotLikeThis "
-          );
+        case "#yes":
+          yesCount += 1;
           break;
-        case "!damnitgary":
-          client.action(removeHash(channel), "God fucking dammit");
+        case "#no":
+          noCount += 1;
           break;
       }
 
@@ -157,6 +253,9 @@ client.on("chat", (channel, user, message, self) => {
               ", " +
               insults[getRandomInt(insults.length)]
           );
+          break;
+        case "!grid":
+          gridPrint(message, channel, user);
           break;
       }
   }
