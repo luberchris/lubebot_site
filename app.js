@@ -73,14 +73,14 @@ const gridPrint = (strang, channel, user) => {
   if ((messageLengthParts >= 4 && isNaN(width)) || messageLengthParts < 4) {
     width = 1;
   }
-  
+
   const emoteArray = [];
 
   _.each(_.times(Number(width)), line => {
     emoteArray.push(repeated);
   });
 
-  console.log(emoteArray.join(" "))
+  console.log(emoteArray.join(" "));
 
   _.each(_.times(Number(height)), line => {
     client.say(removeHash(channel), emoteArray.join(" "));
@@ -197,10 +197,24 @@ client.on("chat", (channel, user, message, self) => {
             removeHash(channel) + " you better DRINK"
           );
           break;
+        //revise
         case "!gaytest":
-          client.action(removeHash(channel), "gaytest filler");
-        // Figure out how to make sounds play
-        // drink.play();
+          client.action(
+            removeHash(channel),
+            "GayPride " +
+              user.username +
+              " is " +
+              getRandomInt(100) +
+              "% gay GayPride"
+          );
+          break;
+        case "!lurk":
+          client.action(
+            removeHash(channel),
+            user.username +
+              ", thank you for the lurk! Remember to mute the tab and not the stream"
+          );
+          break;
         case "!mods":
           client.mods(removeHash(channel)).then(mods => {
             client.action(removeHash(channel), "Mods: " + mods);
