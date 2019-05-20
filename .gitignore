@@ -1,3 +1,2 @@
-twitch_oauth.txt
 .env
-node_modules
+/node_modules

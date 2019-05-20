@@ -1,5 +1,33 @@
+//Dependencies
+require("dotenv");
+const Db = require("mongodb").Db,
+  MongoClient = require("mongodb").MongoClient,
+  Server = require("mongodb").Server,
+  ReplSetServers = require("mongodb").ReplSetServers,
+  ObjectID = require("mongodb").ObjectID,
+  Binary = require("mongodb").Binary,
+  GridStore = require("mongodb").GridStore,
+  Grid = require("mongodb").Grid,
+  Code = require("mongodb").Code,
+  BSON = require("mongodb").BSON,
+  assert = require("assert"),
+  bodyParser = require("body-parser"),
+  path = require("path"),
+  express = require("express");
+
+//external functions
 const helpers = require("./helpers");
 const controller = require("./controller");
+
+let app = express();
+
+// //all envs
+app.set("port", process.env.PORT || 3000);
+app.set("views", __dirname + "/views");
+app.set("view engine", "jade");
+
+app.use(bodyParser());
+app.use(express.static(path.join(__dirname, "public")));
 
 //////////////////Global Variables////////////////////
 const client = controller.client;

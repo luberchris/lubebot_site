@@ -15,6 +15,7 @@ client.on("chat", (channel, user, message, self) => {
     case "#no":
       noCount += 1;
       break;
+    default:
   }
 });
 

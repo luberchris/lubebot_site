@@ -1,4 +1,5 @@
 const tmi = require("tmi.js");
+const helpers = require("./helpers");
 require("dotenv").config();
 
 //////////////////Twitch Connection Options////////////////////
@@ -47,7 +48,7 @@ client.on("reconnect", () => {
 
 //Serverchange
 client.on("serverchange", channel => {
-  console.log("Server has switched: " + removeHash(channel));
+  console.log("Server has switched: " + helpers.removeHash(channel));
 });
 
 module.exports = { client: client };
