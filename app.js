@@ -1,32 +1,21 @@
 //Dependencies
 require("dotenv");
-const Db = require("mongodb").Db,
-  MongoClient = require("mongodb").MongoClient,
-  Server = require("mongodb").Server,
-  ReplSetServers = require("mongodb").ReplSetServers,
-  ObjectID = require("mongodb").ObjectID,
-  Binary = require("mongodb").Binary,
-  GridStore = require("mongodb").GridStore,
-  Grid = require("mongodb").Grid,
-  Code = require("mongodb").Code,
-  BSON = require("mongodb").BSON,
-  assert = require("assert"),
-  bodyParser = require("body-parser"),
+
+const bodyParser = require("body-parser"),
   path = require("path"),
   express = require("express");
 
 //external functions
 const helpers = require("./helpers");
-const controller = require("./controller");
+const controller = require("./controllers/twitchController");
 
+//all envs
 let app = express();
-
-// //all envs
 app.set("port", process.env.PORT || 3000);
 app.set("views", __dirname + "/views");
-app.set("view engine", "jade");
 
-app.use(bodyParser());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 //////////////////Global Variables////////////////////
@@ -41,7 +30,7 @@ const client = controller.client;
 
 //Ban
 client.on("ban", (channel, username, reason) => {
-  client.action(
+  client.say(
     helpers.removeHash(channel),
     "LUL LUL LUL " +
       helpers.removeHash(username) +
@@ -61,8 +50,12 @@ client.on("chat", (channel, user, message, self) => {
   switch (message.split(" ").length) {
     case 1:
       switch (message) {
+        case "!chats":
+          break;
         case "!dammitgary":
           client.say(helpers.removeHash(channel), "G-d fucking dammit");
+          break;
+        case "!deaths":
           break;
         case "!drink":
           client.say(
@@ -81,6 +74,8 @@ client.on("chat", (channel, user, message, self) => {
               "% gay GayPride"
           );
           break;
+        case "!lubes":
+          break;
         case "!lurk":
           client.say(
             helpers.removeHash(channel),
@@ -90,12 +85,12 @@ client.on("chat", (channel, user, message, self) => {
           break;
         case "!mods":
           client.mods(helpers.removeHash(channel)).then(mods => {
-            client.action(helpers.removeHash(channel), "Mods: " + mods);
+            client.say(helpers.removeHash(channel), "Mods: " + mods);
           });
           break;
         case "!shot":
           helpers.getVotes(helpers.removeHash(channel)).then(done => {
-            client.action(
+            client.say(
               helpers.removeHash(channel),
               done
                 ? "Take a shot, honey"
@@ -116,11 +111,19 @@ client.on("chat", (channel, user, message, self) => {
             "Here's Chris's Twitter: https://twitter.com/luberchris"
           );
           break;
+        case "!users":
+          break;
         case "!website":
           client.say(
             helpers.removeHash(channel),
             "Here's Chris's website: http://chrisluber.com"
           );
+          break;
+        case "#death":
+          break;
+        case "#lube":
+          break;
+        default:
           break;
       }
 
@@ -128,7 +131,7 @@ client.on("chat", (channel, user, message, self) => {
       switch (message.substr(0, message.indexOf(" "))) {
         //Chat commands
         case "!mock":
-          client.action(
+          client.say(
             helpers.removeHash(channel),
             helpers.mock(message.substr(message.indexOf(" ") + 1))
           );
@@ -144,7 +147,7 @@ client.on("chat", (channel, user, message, self) => {
 
 //Clearchat
 client.on("clearchat", channel => {
-  client.action(
+  client.say(
     helpers.removeHash(channel),
     helpers.removeHash(channel) + "'s chat was cleared!"
   );
@@ -158,7 +161,7 @@ client.on("clearchat", channel => {
 //Hosted
 client.on("hosted", (channel, username, viewers, autohost) => {
   if (!autohost) {
-    client.action(
+    client.say(
       helpers.removeHash(channel),
       helpers.removeHash(username) +
         " is hosting us for " +
@@ -166,7 +169,7 @@ client.on("hosted", (channel, username, viewers, autohost) => {
         " people!"
     );
     for (let i = 0; i < 10; i++) {
-      client.action(
+      client.say(
         helpers.removeHash(channel),
         helpers.removeHash(username) +
           " is hosting us for " +
@@ -186,7 +189,7 @@ client.on("hosted", (channel, username, viewers, autohost) => {
 
 //Hosting
 client.on("hosting", (channel, target, viewers) => {
-  client.action(
+  client.say(
     helpers.removeHash(channel),
     viewers + " of us are hosting " + helpers.removeHash(target) + "!"
   );
@@ -207,7 +210,7 @@ client.on("hosting", (channel, target, viewers) => {
 //Raided
 client.on("raided", (channel, username, viewers) => {
   for (let i = 0; i < 10; i++) {
-    client.action(
+    client.say(
       helpers.removeHash(channel),
       viewers +
         " NotLikeThis HeyGuys Oh golly here they come " +
@@ -215,7 +218,7 @@ client.on("raided", (channel, username, viewers) => {
         " VoteYea VoteYea VoteYea VoteYea"
     );
   }
-  client.action(
+  client.say(
     helpers.removeHash(channel),
     `My butt is ready GayPride GayPride GayPride GayPride GayPride GayPride GayPride GayPride\n
     We're being raided by ` +
@@ -237,7 +240,7 @@ client.on("raided", (channel, username, viewers) => {
 
 //Timeout
 client.on("timeout", (channel, username, length, reason) => {
-  client.action(
+  client.say(
     helpers.removeHash(channel),
     helpers.removeHash(username) +
       " was shushed for " +

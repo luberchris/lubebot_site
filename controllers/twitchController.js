@@ -1,5 +1,5 @@
 const tmi = require("tmi.js");
-const helpers = require("./helpers");
+const helpers = require("../helpers");
 require("dotenv").config();
 
 //////////////////Twitch Connection Options////////////////////

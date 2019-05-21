@@ -1,5 +1,22 @@
-const _ = require("lodash");
-const controller = require("./controller");
+require("dotenv");
+const _ = require("lodash"),
+  controller = require("./controllers/twitchController"),
+  Db = require("mongodb").Db,
+  MongoClient = require("mongodb").MongoClient,
+  Server = require("mongodb").Server,
+  ReplSetServers = require("mongodb").ReplSetServers,
+  Binary = require("mongodb").Binary,
+  GridStore = require("mongodb").GridStore,
+  Grid = require("mongodb").Grid,
+  Code = require("mongodb").Code,
+  BSON = require("mongodb").BSON,
+  assert = require("assert"),
+  schemas = require("./models"),
+  mongoose = require("mongoose")
+  db = require("./models");
+
+//Connect to database
+mongoose.connect(process.env.DB_ROUTE, { useNewUrlParser: true });
 
 // Import channel client
 const client = controller.client;
