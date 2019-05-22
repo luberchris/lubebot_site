@@ -6,8 +6,9 @@ const bodyParser = require("body-parser"),
   express = require("express");
 
 //external functions
-const helpers = require("./helpers");
-const controller = require("./controllers/twitchController");
+const helpers = require("./helpers"),
+  controller = require("./controllers/twitchController"),
+  queries = require("./controllers/queryController");
 
 //all envs
 let app = express();
@@ -20,8 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 //////////////////Global Variables////////////////////
 const client = controller.client;
-
-// const drink = new Audio("./assets/sounds/ice_cubes.mp3");
+const greetings = require("./assets/lists/greetings"); //long list of different greetings
 
 //////////////////Chat Actions////////////////////
 
@@ -46,102 +46,6 @@ client.on("ban", (channel, username, reason) => {
 });
 
 //Chat
-client.on("chat", (channel, user, message, self) => {
-  switch (message.split(" ").length) {
-    case 1:
-      switch (message) {
-        case "!chats":
-          break;
-        case "!dammitgary":
-          client.say(helpers.removeHash(channel), "G-d fucking dammit");
-          break;
-        case "!deaths":
-          break;
-        case "!drink":
-          client.say(
-            helpers.removeHash(channel),
-            helpers.removeHash(channel) + " you better DRINK"
-          );
-          break;
-        //revise
-        case "!gaytest":
-          client.say(
-            helpers.removeHash(channel),
-            "GayPride " +
-              user.username +
-              " is " +
-              helpers.getRandomInt(100) +
-              "% gay GayPride"
-          );
-          break;
-        case "!lubes":
-          break;
-        case "!lurk":
-          client.say(
-            helpers.removeHash(channel),
-            user.username +
-              ", thank you for the lurk! Remember to mute the tab and not the stream"
-          );
-          break;
-        case "!mods":
-          client.mods(helpers.removeHash(channel)).then(mods => {
-            client.say(helpers.removeHash(channel), "Mods: " + mods);
-          });
-          break;
-        case "!shot":
-          helpers.getVotes(helpers.removeHash(channel)).then(done => {
-            client.say(
-              helpers.removeHash(channel),
-              done
-                ? "Take a shot, honey"
-                : "You don't need to take a shot right now, honey"
-            );
-          });
-          break;
-        case "!stairs":
-          //Add soundbyte of Eddy
-          client.say(
-            helpers.removeHash(channel),
-            "NotLikeThis NotLikeThis NotLikeThis WHAT HAPPENED TO THE STAIRS?? NotLikeThis NotLikeThis NotLikeThis "
-          );
-          break;
-        case "!twitter":
-          client.say(
-            helpers.removeHash(channel),
-            "Here's Chris's Twitter: https://twitter.com/luberchris"
-          );
-          break;
-        case "!users":
-          break;
-        case "!website":
-          client.say(
-            helpers.removeHash(channel),
-            "Here's Chris's website: http://chrisluber.com"
-          );
-          break;
-        case "#death":
-          break;
-        case "#lube":
-          break;
-        default:
-          break;
-      }
-
-    default:
-      switch (message.substr(0, message.indexOf(" "))) {
-        //Chat commands
-        case "!mock":
-          client.say(
-            helpers.removeHash(channel),
-            helpers.mock(message.substr(message.indexOf(" ") + 1))
-          );
-          break;
-        case "!grid":
-          helpers.gridPrint(message, channel, user);
-          break;
-      }
-  }
-});
 
 //Cheer
 
@@ -196,8 +100,159 @@ client.on("hosting", (channel, target, viewers) => {
 });
 
 //Join
+client.on("join", (channel, username, self) => {
+  client.say(
+    helpers.removeHash(channel),
+    greetings[helpers.getRandomInt(greetings.length - 1)] +
+      ", " +
+      username +
+      "!"
+  );
+});
+
 //Logon
 //Message
+client.on("message", (channel, userstate, message, self) => {
+  // Don't listen to my own messages..
+  if (self) return;
+
+  // Handle different message types..
+  switch (userstate["message-type"]) {
+    case "action":
+      // This is an action message..
+      break;
+    case "chat":
+      // This is a chat message..
+      queries.postUser(userstate);
+      queries.putUser("chats", userstate.username);
+      queries.putCount("chats");
+      switch (message.split(" ").length) {
+        case 1:
+          switch (message) {
+            case "!chats":
+              queries.getCount("chats", client, helpers.removeHash(channel));
+              break;
+            case "!dammitgary":
+              client.say(helpers.removeHash(channel), "G-d fucking dammit");
+              break;
+            case "!deaths":
+              queries.getCount("deaths", client, helpers.removeHash(channel));
+              break;
+            case "!drink":
+              client.say(
+                helpers.removeHash(channel),
+                helpers.removeHash(channel) + " you better DRINK"
+              );
+              break;
+            //revise
+            case "!gaytest":
+              client.say(
+                helpers.removeHash(channel),
+                "GayPride " +
+                  userstate["display-name"] +
+                  " is " +
+                  helpers.getRandomInt(100) +
+                  "% gay GayPride"
+              );
+              break;
+            case "!lubes":
+              queries.getCount("lubes", client, helpers.removeHash(channel));
+              break;
+            case "!lurk":
+              client.say(
+                helpers.removeHash(channel),
+                userstate["display-name"] +
+                  ", thank you for the lurk! Remember to mute the tab and not the stream"
+              );
+              break;
+            case "!me":
+              queries.userStats(
+                client,
+                helpers.removeHash(channel),
+                userstate["display-name"]
+              );
+              break;
+            case "!mods":
+              client.mods(helpers.removeHash(channel)).then(mods => {
+                client.say(helpers.removeHash(channel), "Mods: " + mods);
+              });
+              break;
+            case "!shot":
+              helpers.getVotes(helpers.removeHash(channel)).then(done => {
+                client.say(
+                  helpers.removeHash(channel),
+                  done
+                    ? "Take a shot, honey"
+                    : "You don't need to take a shot right now, honey"
+                );
+              });
+              break;
+            case "!stairs":
+              //Add soundbyte of Eddy
+              client.say(
+                helpers.removeHash(channel),
+                "NotLikeThis NotLikeThis NotLikeThis WHAT HAPPENED TO THE STAIRS?? NotLikeThis NotLikeThis NotLikeThis "
+              );
+              break;
+            case "!twitter":
+              client.say(
+                helpers.removeHash(channel),
+                "Here's Chris's Twitter: https://twitter.com/luberchris"
+              );
+              break;
+            case "!users":
+              queries.getCount("users", client, helpers.removeHash(channel));
+              break;
+            case "!website":
+              client.say(
+                helpers.removeHash(channel),
+                "Here's Chris's website: http://chrisluber.com"
+              );
+              break;
+            case "#death":
+              if (helpers.isAdmin(client, channel, userstate.username)) {
+                queries.putCount("deaths");
+              } else {
+                client.say(
+                  helpers.removeHash(channel),
+                  "Sorry " +
+                    userstate["display-name"] +
+                    ", only mods can add to the death counter"
+                );
+              }
+              break;
+            case "#lube":
+              queries.putCount("lubes");
+              queries.putUser("lubes", userstate.username);
+              break;
+            default:
+              break;
+          }
+
+        default:
+          switch (message.substr(0, message.indexOf(" "))) {
+            //Chat commands
+            case "!mock":
+              client.say(
+                helpers.removeHash(channel),
+                helpers.mock(message.substr(message.indexOf(" ") + 1))
+              );
+              break;
+            case "!grid":
+              helpers.gridPrint(message, channel, userstate);
+              break;
+          }
+      }
+      break;
+    case "whisper":
+      // This is a whisper..
+      break;
+    default:
+      // Something else ?
+      break;
+  }
+});
+
 //Messagedeleted
 //Mod
 //Mods

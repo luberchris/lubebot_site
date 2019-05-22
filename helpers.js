@@ -11,9 +11,9 @@ const _ = require("lodash"),
   Code = require("mongodb").Code,
   BSON = require("mongodb").BSON,
   assert = require("assert"),
-  schemas = require("./models"),
-  mongoose = require("mongoose")
-  db = require("./models");
+  mongoose = require("mongoose");
+db = require("./models");
+queries = require("./controllers/queryController");
 
 //Connect to database
 mongoose.connect(process.env.DB_ROUTE, { useNewUrlParser: true });
@@ -105,6 +105,13 @@ module.exports = {
     _.each(_.times(Number(height)), line => {
       client.say(this.removeHash(channel), emoteArray.join(" "));
     });
+  },
+
+  isAdmin: function(client, channel, user) {
+    return (
+      client.isMod(channel, user) ||
+      user.toLowerCase() === this.removeHash(channel).toLowerCase()
+    );
   },
 
   mock: function(message) {
