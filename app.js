@@ -23,6 +23,10 @@ app.use(express.static(path.join(__dirname, "public")));
 const client = controller.client;
 const greetings = require("./assets/lists/greetings"); //long list of different greetings
 const classes = require("./assets/lists/classes"); //list of classes and bonuses
+let classNames = [];
+for (let i = 0; i < classes.length; i++) {
+  classNames.push(classes[i].name);
+}
 
 //////////////////Chat Actions////////////////////
 
@@ -130,9 +134,6 @@ client.on("message", (channel, userstate, message, self) => {
       switch (message.split(" ").length) {
         case 1:
           switch (message) {
-
-
-
             case "!test":
               let str = "";
               for (let i = 0; i < classes.length; i++) {
@@ -141,19 +142,13 @@ client.on("message", (channel, userstate, message, self) => {
               client.say(helpers.removeHash(channel), str);
               break;
 
-
-
             case "?chats":
               queries.getCount("chats", client, helpers.removeHash(channel));
               break;
 
-
-
             case "?deaths":
               queries.getCount("deaths", client, helpers.removeHash(channel));
               break;
-
-
 
             case "!drink":
               client.say(
@@ -161,8 +156,6 @@ client.on("message", (channel, userstate, message, self) => {
                 helpers.removeHash(channel) + " you better DRINK"
               );
               break;
-
-
 
             //revise
             case "!gaytest":
@@ -176,13 +169,9 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
             case "?lubes":
               queries.getCount("lubes", client, helpers.removeHash(channel));
               break;
-
-
 
             case "!lurk":
               client.say(
@@ -192,8 +181,6 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
             case "?me":
               queries.userStats(
                 client,
@@ -202,15 +189,11 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
             case "?mods":
               client.mods(helpers.removeHash(channel)).then(mods => {
                 client.say(helpers.removeHash(channel), "Mods: " + mods);
               });
               break;
-
-
 
             case "!shot":
               helpers.getVotes(helpers.removeHash(channel)).then(done => {
@@ -223,8 +206,6 @@ client.on("message", (channel, userstate, message, self) => {
               });
               break;
 
-
-
             case "!stairs":
               //Add soundbyte of Eddy
               client.say(
@@ -233,8 +214,6 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
             case "?twitter":
               client.say(
                 helpers.removeHash(channel),
@@ -242,13 +221,9 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
             case "?users":
               queries.getUserCount(client, helpers.removeHash(channel));
               break;
-
-
 
             case "?website":
               client.say(
@@ -256,8 +231,6 @@ client.on("message", (channel, userstate, message, self) => {
                 "Here's Chris's website: http://chrisluber.com"
               );
               break;
-
-
 
             case "#death":
               if (helpers.isAdmin(client, channel, userstate.username)) {
@@ -272,28 +245,23 @@ client.on("message", (channel, userstate, message, self) => {
               }
               break;
 
-
-
             case "#lube":
               queries.putCount("lubes");
               queries.putUser("lubes", userstate.username);
               break;
 
-
-
             default:
               break;
-
-
-
           }
 
         default:
           switch (message.substr(0, message.indexOf(" "))) {
-
-
-
             //Chat commands
+
+            case "!grid":
+              helpers.gridPrint(message, channel, userstate);
+              break;
+
             case "!mock":
               client.say(
                 helpers.removeHash(channel),
@@ -301,14 +269,39 @@ client.on("message", (channel, userstate, message, self) => {
               );
               break;
 
-
-
-            case "!grid":
-              helpers.gridPrint(message, channel, userstate);
+            case "!setClass":
+              if (
+                classNames.includes(
+                  message.substr(message.indexOf(" ") + 1).toLowerCase()
+                )
+              ) {
+                queries.putUser(
+                  "class",
+                  userstate.username,
+                  undefined,
+                  message.substr(message.indexOf(" ") + 1),
+                  client,
+                  helpers.removeHash(channel)
+                );
+              } else {
+                client.say(
+                  helpers.removeHash(channel),
+                  userstate["display-name"] +
+                    ", " +
+                    message.substr(message.indexOf(" ") + 1) +
+                    " is not a class I recognize! Try again using one of these:"
+                );
+                let classString = "";
+                for (let i = 0; i < classNames.length; i++) {
+                  if (i !== classNames.length - 1) {
+                    classString += classNames[i] + ", ";
+                  } else {
+                    classString += classNames[i];
+                  }
+                }
+                client.say(helpers.removeHash(channel), classString);
+              }
               break;
-
-
-
           }
       }
       break;

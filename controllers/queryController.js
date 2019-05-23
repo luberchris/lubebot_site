@@ -1,4 +1,5 @@
 const db = require("../models");
+const helpers = require("../helpers");
 
 module.exports = {
   getCount: (req, client, channel) => {
@@ -47,10 +48,12 @@ module.exports = {
       });
   },
 
-  putUser: (command, username, xp, userClass) => {
+  putUser: (command, username, xp, userClass, client, channel) => {
     //Determine optional parameters
     xp = xp || null;
     userClass = userClass || null;
+    cleint = client || null;
+    channel = channel || null;
 
     //Switch for commands
     switch (command) {
@@ -90,11 +93,22 @@ module.exports = {
           });
         break;
       case "class":
-        db.User.updateOne({ name: username }, { $set: { class: userClass } })
-          .then()
-          .catch(err => {
-            console.log(err);
-          });
+        db.User.findOne({ name: username }).then(res => {
+          if (res.class === "") {
+            db.User.updateOne(
+              { name: username },
+              { $set: { class: userClass } }
+            )
+              .then(complete => {
+                client.say(channel, "You are now a " + userClass + "!");
+              })
+              .catch(err => {
+                console.log(err);
+              });
+          } else {
+            client.say(channel, "You are already a " + res.class + "!");
+          }
+        });
         break;
     }
   },
@@ -104,7 +118,15 @@ module.exports = {
       name: username.toLowerCase()
     })
       .then(res => {
-        client.say(channel, username + ": Lvl " + res.level + " " + res.class);
+        client.say(
+          channel,
+          username +
+            ": Lvl " +
+            res.level +
+            " " +
+            res.class.charAt(0).toUpperCase() +
+            res.class.slice(1)
+        );
         client.say(channel, "Xp: " + res.xp);
         client.say(channel, "Chats: " + res.chats);
         client.say(channel, "Lubes: " + res.lubes);
