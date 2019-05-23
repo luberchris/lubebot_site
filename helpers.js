@@ -11,9 +11,10 @@ const _ = require("lodash"),
   Code = require("mongodb").Code,
   BSON = require("mongodb").BSON,
   assert = require("assert"),
-  mongoose = require("mongoose");
-db = require("./models");
-queries = require("./controllers/queryController");
+  mongoose = require("mongoose"),
+  XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest,
+  db = require("./models"),
+  queries = require("./controllers/queryController");
 
 //Connect to database
 mongoose.connect(process.env.DB_ROUTE, { useNewUrlParser: true });
@@ -54,12 +55,12 @@ module.exports = {
       channel,
       "30 seconds: #yes to make Luber take a shot, #no otherwise"
     );
-    // setTimeout(() => {
-    //   client.action(
-    //     channel,
-    //     "15 seconds left!!! #yes to make Luber take a shot!"
-    //   );
-    // }, 15000);
+    setTimeout(() => {
+      client.action(
+        channel,
+        "15 seconds left!!! #yes to make Luber take a shot!"
+      );
+    }, 15000);
     var promise = new Promise((resolve, reject) => {
       setTimeout(() => {
         client.say(channel, yesCount + " yes :" + noCount + " no");
@@ -68,7 +69,7 @@ module.exports = {
         } else {
           resolve(false);
         }
-      }, 4000);
+      }, 30000);
     });
     return promise;
   },
@@ -136,6 +137,25 @@ module.exports = {
       );
     } else {
       return user.charAt(0).toUpperCase() + user.slice(1);
+    }
+  },
+
+  rollDice: function(roll) {
+    let number = roll.split("d")[0];
+    let die = roll.split("d")[1].split(/[+-*/]+/)[0];
+    let modifier = roll.split("d")[1].split(/[+-*/]+/)[1];
+    let total = 0;
+    for (let i = 0; i < number; i++) {
+      total += this.getRandomInt(die);
+    }
+    return total + modifier;
+  },
+
+  search: (nameKey, myArray) => {
+    for (var i = 0; i < myArray.length; i++) {
+      if (myArray[i].name === nameKey) {
+        return myArray[i];
+      }
     }
   }
 };

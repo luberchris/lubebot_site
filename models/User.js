@@ -7,7 +7,8 @@ const userSchema = new Schema({
   lubes: { type: Number, default: 0 },
   sub: { type: Boolean, default: false },
   level: { type: Number, default: 1 },
-  xp: { type: Number, default: 0 }
+  xp: { type: Number, default: 0 },
+  class: { type: String, default: "" }
 });
 
 const User = mongoose.model("User", userSchema);

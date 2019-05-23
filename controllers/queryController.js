@@ -18,18 +18,13 @@ module.exports = {
 
   getQuote: () => {},
 
-  userStats: (client, channel, username) => {
-    db.User.findOne({
-      name: username.toLowerCase()
-    })
+  getUserCount: (client, channel) => {
+    db.User.count()
       .then(res => {
-        client.say(channel, username + ": Lvl " + res.level);
-        client.say(channel, "Xp: " + res.xp);
-        client.say(channel, "Chats: " + res.chats);
-        client.say(channel, "Lubes: " + res.lubes);
+        client.say(channel, "Users: " + res);
       })
       .catch(err => {
-        console.log("Error finding user: " + err);
+        console.log(err);
       });
   },
 
@@ -52,7 +47,12 @@ module.exports = {
       });
   },
 
-  putUser: (command, username, xp = null) => {
+  putUser: (command, username, xp, userClass) => {
+    //Determine optional parameters
+    xp = xp || null;
+    userClass = userClass || null;
+
+    //Switch for commands
     switch (command) {
       case "chats":
         db.User.updateOne({ name: username }, { $inc: { chats: 1 } })
@@ -89,6 +89,28 @@ module.exports = {
             console.log(err);
           });
         break;
+      case "class":
+        db.User.updateOne({ name: username }, { $set: { class: userClass } })
+          .then()
+          .catch(err => {
+            console.log(err);
+          });
+        break;
     }
+  },
+
+  userStats: (client, channel, username) => {
+    db.User.findOne({
+      name: username.toLowerCase()
+    })
+      .then(res => {
+        client.say(channel, username + ": Lvl " + res.level + " " + res.class);
+        client.say(channel, "Xp: " + res.xp);
+        client.say(channel, "Chats: " + res.chats);
+        client.say(channel, "Lubes: " + res.lubes);
+      })
+      .catch(err => {
+        console.log("Error finding user: " + err);
+      });
   }
 };
