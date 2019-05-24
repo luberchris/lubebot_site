@@ -12,9 +12,9 @@ const _ = require("lodash"),
   BSON = require("mongodb").BSON,
   assert = require("assert"),
   mongoose = require("mongoose"),
-  XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest,
   db = require("./models"),
-  queries = require("./controllers/queryController");
+  queries = require("./controllers/queryController"),
+  monsters = require("./assets/lists/monsters");
 
 //Connect to database
 mongoose.connect(process.env.DB_ROUTE, { useNewUrlParser: true });
@@ -42,6 +42,17 @@ module.exports = {
     let minutes = seconds / 60;
     let remainder = seconds % 60;
     return minutes + " minutes and " + remainder + " seconds";
+  },
+
+  findMonster: function(cr, username, channel) {
+    for (let i = 0; i < monsters.length; i++) {
+      if (monsters[i].CR === cr) {
+        let scary =
+          monsters[i].monsters[this.getRandomInt(monsters[i].monsters.length)];
+        queries.postEncounter(username, scary);
+        client.say(channel, username + ", you're now fighting a " + scary.name);
+      }
+    }
   },
 
   getRandomInt: function(max) {

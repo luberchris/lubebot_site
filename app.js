@@ -106,13 +106,13 @@ client.on("hosting", (channel, target, viewers) => {
 
 //Join
 client.on("join", (channel, username, self) => {
-  client.say(
-    helpers.removeHash(channel),
-    greetings[helpers.getRandomInt(greetings.length - 1)] +
-      ", " +
-      username +
-      "!"
-  );
+  // client.say(
+  //   helpers.removeHash(channel),
+  //   greetings[helpers.getRandomInt(greetings.length - 1)] +
+  //     ", " +
+  //     username +
+  //     "!"
+  // );
 });
 
 //Logon
@@ -258,6 +258,14 @@ client.on("message", (channel, userstate, message, self) => {
           switch (message.substr(0, message.indexOf(" "))) {
             //Chat commands
 
+            case "!fight":
+              let cr = parseFloat(message.substr(message.indexOf(" ") + 1));
+              helpers.findMonster(
+                cr,
+                userstate.username,
+                helpers.removeHash(channel)
+              );
+              break;
             case "!grid":
               helpers.gridPrint(message, channel, userstate);
               break;

@@ -1,44 +1,72 @@
 module.exports = classes = [
   {
-    name: "barbarian"
+    name: "barbarian",
+    hit:"1d12",
+    HP:10
   },
   {
-    name: "bard"
+    name: "bard",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "cleric"
+    name: "cleric",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "druid"
+    name: "druid",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "fighter"
+    name: "fighter",
+    hit:"1d10",
+    HP:10
   },
   {
-    name: "monk"
+    name: "monk",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "paladin"
+    name: "paladin",
+    hit:"1d10",
+    HP:10
   },
   {
-    name: "ranger"
+    name: "ranger",
+    hit:"1d10",
+    HP:10
   },
   {
-    name: "rogue"
+    name: "rogue",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "sorcerer"
+    name: "sorcerer",
+    hit:"1d6",
+    HP:10
   },
   {
-    name: "warlock"
+    name: "warlock",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "wizard"
+    name: "wizard",
+    hit:"1d6",
+    HP:10
   },
   {
-    name: "artificer"
+    name: "artificer",
+    hit:"1d8",
+    HP:10
   },
   {
-    name: "blood hunter"
+    name: "blood hunter",
+    hit:"1d10",
+    HP:10
   }
 ];

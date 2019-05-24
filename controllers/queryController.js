@@ -20,7 +20,7 @@ module.exports = {
   getQuote: () => {},
 
   getUserCount: (client, channel) => {
-    db.User.count()
+    db.User.countDocuments()
       .then(res => {
         client.say(channel, "Users: " + res);
       })
@@ -31,13 +31,87 @@ module.exports = {
 
   postQuote: () => {},
 
-  postUser: req => {
-    if (db.User.find({ name: req.username }) === 0) {
-      let user = new db.User({ name: req.username, sub: req.subscriber });
-      user.save(err => {
-        if (err) console.log(err);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ////////////////////WORK ON THIS
+
+
+
+  postEncounter: (player, monster) => {
+    db.User.findOne({
+      name: player.toLowerCase()
+    })
+      .then(res => {
+        let user = res;
+        db.Encounter.find({ player: player.name })
+          .then(res => {
+            if (res.length === 0) {
+              console.log(player.name + "'s encounter not found - adding...");
+              let encounter = new db.Encounter({
+                player: user,
+                monster: monster
+              });
+              encounter.save(err => {
+                console.log(err);
+              });
+            } else {
+              console.log(player.name + "'s encounter found!");
+            }
+          })
+          .catch(err => {
+            console.log(err);
+          });
+      })
+      .catch(err => {
+        console.log(err);
       });
-    }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  postUser: req => {
+    db.User.find({ name: req.username })
+      .then(res => {
+        if (res.length === 0) {
+          console.log(req + " not found - adding...");
+          let user = new db.User({ name: req.username, sub: req.subscriber });
+          user.save(err => {
+            console.log(err);
+          });
+        } else {
+          console.log(req.username + " found!");
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
   },
 
   putCount: req => {
@@ -114,6 +188,8 @@ module.exports = {
   },
 
   userStats: (client, channel, username) => {
+    client = client || null;
+    channel = channel || null;
     db.User.findOne({
       name: username.toLowerCase()
     })
@@ -130,6 +206,7 @@ module.exports = {
         client.say(channel, "Xp: " + res.xp);
         client.say(channel, "Chats: " + res.chats);
         client.say(channel, "Lubes: " + res.lubes);
+        return res;
       })
       .catch(err => {
         console.log("Error finding user: " + err);
