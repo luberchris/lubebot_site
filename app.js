@@ -28,6 +28,11 @@ for (let i = 0; i < classes.length; i++) {
   classNames.push(classes[i].name);
 }
 
+//////////////////More Helpers////////////////////
+// const findClass = className => {
+//   return ;
+// };
+
 //////////////////Chat Actions////////////////////
 
 //Action
@@ -135,15 +140,27 @@ client.on("message", (channel, userstate, message, self) => {
         case 1:
           switch (message) {
             case "!test":
-              let str = "";
-              for (let i = 0; i < classes.length; i++) {
-                str += classes[i].name + ", ";
-              }
-              client.say(helpers.removeHash(channel), str);
+              // console.log(
+              //   classes.find(
+              //     char => (char.name = message.substr(message.indexOf(" ") + 1))
+              //   )
+              // );
               break;
 
             case "?chats":
               queries.getCount("chats", client, helpers.removeHash(channel));
+              break;
+
+            case "?classes":
+              let classString = "";
+              for (let i = 0; i < classNames.length; i++) {
+                if (i !== classNames.length - 1) {
+                  classString += classNames[i] + ", ";
+                } else {
+                  classString += classNames[i];
+                }
+              }
+              client.say(helpers.removeHash(channel), classString);
               break;
 
             case "?deaths":
@@ -191,6 +208,7 @@ client.on("message", (channel, userstate, message, self) => {
 
             case "?mods":
               client.mods(helpers.removeHash(channel)).then(mods => {
+                console.log(mods);
                 client.say(helpers.removeHash(channel), "Mods: " + mods);
               });
               break;
@@ -233,16 +251,28 @@ client.on("message", (channel, userstate, message, self) => {
               break;
 
             case "#death":
-              if (helpers.isAdmin(client, channel, userstate.username)) {
-                queries.putCount("deaths");
-              } else {
-                client.say(
-                  helpers.removeHash(channel),
-                  "Sorry " +
-                    userstate["display-name"] +
-                    ", only mods can add to the death counter"
-                );
-              }
+              client.mods(helpers.removeHash(channel)).then(mods => {
+                if (
+                  helpers.isAdmin(
+                    mods,
+                    helpers.removeHash(channel),
+                    userstate.username
+                  )
+                ) {
+                  client.say(
+                    helpers.removeHash(channel),
+                    userstate.username + " is an Admin!"
+                  );
+                  queries.putCount("deaths");
+                } else {
+                  client.say(
+                    helpers.removeHash(channel),
+                    "Sorry " +
+                      userstate["display-name"] +
+                      ", only mods can add to the death counter"
+                  );
+                }
+              });
               break;
 
             case "#lube":
@@ -257,6 +287,18 @@ client.on("message", (channel, userstate, message, self) => {
         default:
           switch (message.substr(0, message.indexOf(" "))) {
             //Chat commands
+
+            case "!test":
+              for (let i = 0; i < classes.length; i++) {
+                if (
+                  classes[i].name === message.substr(message.indexOf(" ") + 1)
+                ) {
+                  console.log(classes[i]);
+                } else {
+                  console.log("Not found!");
+                }
+              }
+              break;
 
             case "!fight":
               let cr = parseFloat(message.substr(message.indexOf(" ") + 1));
@@ -278,6 +320,14 @@ client.on("message", (channel, userstate, message, self) => {
               break;
 
             case "!setClass":
+              let classAssignment = {};
+              for (let i = 0; i < classes.length; i++) {
+                if (
+                  classes[i].name === message.substr(message.indexOf(" ") + 1)
+                ) {
+                  classAssignment = classes[i];
+                }
+              }
               if (
                 classNames.includes(
                   message.substr(message.indexOf(" ") + 1).toLowerCase()
@@ -291,6 +341,7 @@ client.on("message", (channel, userstate, message, self) => {
                   client,
                   helpers.removeHash(channel)
                 );
+                // queries.putClass(userstate.username, classAssignment);
               } else {
                 client.say(
                   helpers.removeHash(channel),

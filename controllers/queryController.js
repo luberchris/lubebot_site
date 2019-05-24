@@ -29,36 +29,17 @@ module.exports = {
       });
   },
 
-  postQuote: () => {},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ////////////////////WORK ON THIS
-
-
-
   postEncounter: (player, monster) => {
+    console.log("player: " + player);
     db.User.findOne({
       name: player.toLowerCase()
     })
       .then(res => {
         let user = res;
-        db.Encounter.find({ player: player.name })
+
+        db.Encounter.find({ "player.name": res.name })
           .then(res => {
+            console.log("Response from Encounters: " + res);
             if (res.length === 0) {
               console.log(player.name + "'s encounter not found - adding...");
               let encounter = new db.Encounter({
@@ -69,7 +50,7 @@ module.exports = {
                 console.log(err);
               });
             } else {
-              console.log(player.name + "'s encounter found!");
+              console.log(res.name + "'s encounter found!");
             }
           })
           .catch(err => {
@@ -81,20 +62,7 @@ module.exports = {
       });
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  postQuote: () => {},
 
   postUser: req => {
     db.User.find({ name: req.username })
@@ -113,6 +81,66 @@ module.exports = {
         console.log(err);
       });
   },
+
+
+
+
+
+
+
+
+
+
+  /////FIX THIS/////
+
+
+
+  putClass: (username, classData) => {
+    console.log(helpers.setStat());
+    // request = [
+    //   {
+    //     updateOne: {
+    //       filter: { name: username },
+    //       update: {
+    //         $set: {
+    //           stats: {
+    //             AC: 10,
+    //             HP: 8,
+    //             STR: helpers.setStat(),
+    //             DEX: helpers.setStat(),
+    //             CON: helpers.setStat(),
+    //             INT: helpers.setStat(),
+    //             WIS: helpers.setStat(),
+    //             CHA: helpers.setStat(),
+    //             hit: 0,
+    //             damage: classData.hit,
+    //             save: classData.save
+    //           }
+    //         }
+    //       }
+    //     }
+    //   }
+    // ];
+
+    // if (request.length > 0) {
+    //   db.collection.bulkWrite(request);
+    // }
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   putCount: req => {
     db.Count.updateOne({ name: req }, { $inc: { total: 1 } })

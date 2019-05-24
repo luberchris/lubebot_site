@@ -119,9 +119,10 @@ module.exports = {
     });
   },
 
-  isAdmin: function(client, channel, user) {
+  /////// WORK ON THIS
+  isAdmin: function(mods, channel, user) {
     return (
-      client.isMod(channel, user) ||
+      mods.includes(user) ||
       user.toLowerCase() === this.removeHash(channel).toLowerCase()
     );
   },
@@ -152,14 +153,75 @@ module.exports = {
   },
 
   rollDice: function(roll) {
+    //5d20+10
+    //[5, 20+10]
     let number = roll.split("d")[0];
     let die = roll.split("d")[1].split(/[+-*/]+/)[0];
-    let modifier = roll.split("d")[1].split(/[+-*/]+/)[1];
+    let modifier = roll.split("d")[1].split(/[+-*/]+/)[1] || 0;
     let total = 0;
     for (let i = 0; i < number; i++) {
       total += this.getRandomInt(die);
     }
     return total + modifier;
+  },
+
+  setStat: () => {
+    return this.statBonus(this.rollDice("3d6"));
+  },
+
+  statBonus: stat => {
+    //cwchong is a goddddddddddddddd
+    return Math.floor((stat - 10) / 2);
+
+    // switch (stat) {
+    //   case 1:
+    //     return -5;
+    //     break;
+    //   case 2 || 3:
+    //     return -4;
+    //     break;
+    //   case 4 || 5:
+    //     return -3;
+    //     break;
+    //   case 6 || 7:
+    //     return -2;
+    //     break;
+    //   case 8 || 9:
+    //     return -1;
+    //     break;
+    //   case 10 || 11:
+    //     return 0;
+    //     break;
+    //   case 12 || 13:
+    //     return 1;
+    //     break;
+    //   case 14 || 15:
+    //     return 2;
+    //     break;
+    //   case 16 || 17:
+    //     return 3;
+    //     break;
+    //   case 18 || 19:
+    //     return 4;
+    //     break;
+    //   case 20 || 21:
+    //     return 5;
+    //   case 22 || 23:
+    //     return 6;
+    //     break;
+    //   case 24 || 25:
+    //     return 7;
+    //     break;
+    //   case 26 || 27:
+    //     return 8;
+    //     break;
+    //   case 28 || 29:
+    //     return 9;
+    //     break;
+    //   case 30:
+    //     return 10;
+    //     break;
+    // }
   },
 
   search: (nameKey, myArray) => {
