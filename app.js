@@ -147,6 +147,9 @@ client.on("message", (channel, userstate, message, self) => {
               // );
               break;
 
+            case "!attack":
+              break;
+
             case "?chats":
               queries.getCount("chats", client, helpers.removeHash(channel));
               break;
@@ -167,10 +170,22 @@ client.on("message", (channel, userstate, message, self) => {
               queries.getCount("deaths", client, helpers.removeHash(channel));
               break;
 
+            case "!disengage":
+              break;
+
             case "!drink":
               client.say(
                 helpers.removeHash(channel),
                 helpers.removeHash(channel) + " you better DRINK"
+              );
+              break;
+
+            case "!fight":
+              let cr = 0;
+              helpers.findMonster(
+                cr,
+                userstate.username,
+                helpers.removeHash(channel)
               );
               break;
 
@@ -208,7 +223,6 @@ client.on("message", (channel, userstate, message, self) => {
 
             case "?mods":
               client.mods(helpers.removeHash(channel)).then(mods => {
-                console.log(mods);
                 client.say(helpers.removeHash(channel), "Mods: " + mods);
               });
               break;
@@ -341,7 +355,7 @@ client.on("message", (channel, userstate, message, self) => {
                   client,
                   helpers.removeHash(channel)
                 );
-                // queries.putClass(userstate.username, classAssignment);
+                queries.putClass(userstate.username, classAssignment);
               } else {
                 client.say(
                   helpers.removeHash(channel),

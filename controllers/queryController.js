@@ -1,5 +1,32 @@
-const db = require("../models");
-const helpers = require("../helpers");
+const db = require("../models"),
+  helpers = require("../helpers");
+
+const getRandomInt = function(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+};
+
+const rollDice = function(roll) {
+  //5d20+10
+  //[5, 20+10]
+  let number = roll.split("d")[0];
+  let die = roll.split("d")[1].split(/[+-]/)[0];
+  let modifier = roll.split("d")[1].split(/[+-]/)[1] || 0;
+  let total = 0;
+  for (let i = 0; i < number; i++) {
+    total += getRandomInt(die);
+  }
+  console.log(total);
+  return total + modifier;
+};
+
+const statBonus = stat => {
+  //cwchong is a goddddddddddddddd
+  return Math.floor((stat - 10) / 2);
+};
+
+const setStat = () => {
+  return statBonus(rollDice("3d6"));
+};
 
 module.exports = {
   getCount: (req, client, channel) => {
@@ -30,7 +57,6 @@ module.exports = {
   },
 
   postEncounter: (player, monster) => {
-    console.log("player: " + player);
     db.User.findOne({
       name: player.toLowerCase()
     })
@@ -82,65 +108,39 @@ module.exports = {
       });
   },
 
-
-
-
-
-
-
-
-
-
   /////FIX THIS/////
 
-
-
   putClass: (username, classData) => {
-    console.log(helpers.setStat());
-    // request = [
-    //   {
-    //     updateOne: {
-    //       filter: { name: username },
-    //       update: {
-    //         $set: {
-    //           stats: {
-    //             AC: 10,
-    //             HP: 8,
-    //             STR: helpers.setStat(),
-    //             DEX: helpers.setStat(),
-    //             CON: helpers.setStat(),
-    //             INT: helpers.setStat(),
-    //             WIS: helpers.setStat(),
-    //             CHA: helpers.setStat(),
-    //             hit: 0,
-    //             damage: classData.hit,
-    //             save: classData.save
-    //           }
-    //         }
-    //       }
-    //     }
-    //   }
-    // ];
+    console.log(setStat());
+    request = [
+      {
+        updateOne: {
+          filter: { name: username },
+          update: {
+            $set: {
+              stats: {
+                AC: 10,
+                HP: 8,
+                STR: setStat(),
+                DEX: setStat(),
+                CON: setStat(),
+                INT: setStat(),
+                WIS: setStat(),
+                CHA: setStat(),
+                hit: 0,
+                damage: classData.hit,
+                save: classData.save
+              }
+            }
+          }
+        }
+      }
+    ];
 
-    // if (request.length > 0) {
-    //   db.collection.bulkWrite(request);
-    // }
+    if (request.length > 0) {
+      db.User.bulkWrite(request);
+    }
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   putCount: req => {
     db.Count.updateOne({ name: req }, { $inc: { total: 1 } })
@@ -231,7 +231,6 @@ module.exports = {
             res.class.charAt(0).toUpperCase() +
             res.class.slice(1)
         );
-        client.say(channel, "Xp: " + res.xp);
         client.say(channel, "Chats: " + res.chats);
         client.say(channel, "Lubes: " + res.lubes);
         return res;
