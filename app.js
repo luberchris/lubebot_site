@@ -58,6 +58,15 @@ client.on("ban", (channel, username, reason) => {
 //Chat
 
 //Cheer
+client.on("cheer", (channel, userstate, message) => {
+  for (let i = 0; i < 5; i++) {
+    client.say(
+      helpers.removeHash(channel),
+      userstate.username + ": " + message
+    );
+    client.say(helpers.removeHash(channel), "Thank you for the bits!!");
+  }
+});
 
 //Clearchat
 client.on("clearchat", channel => {
@@ -273,10 +282,10 @@ client.on("message", (channel, userstate, message, self) => {
                     userstate.username
                   )
                 ) {
-                  client.say(
-                    helpers.removeHash(channel),
-                    userstate.username + " is an Admin!"
-                  );
+                  // client.say(
+                  //   helpers.removeHash(channel),
+                  //   userstate.username + " is an Admin!"
+                  // );
                   queries.putCount("deaths");
                 } else {
                   client.say(
