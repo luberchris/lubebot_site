@@ -2,9 +2,14 @@
   "name": "lubebot",
   "version": "1.0.0",
   "description": "Twitch chatbot for Lubesy",
-  "main": "app.js",
+  "main": "index.js",
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
-    "test": "test"
+    "start": "node index.js",
+    "test": "node test.js",
+    "app": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -16,7 +21,9 @@
     "lubebot",
     "chatbot",
     "twitch",
-    "streaming"
+    "streaming",
+    "node",
+    "express"
   ],
   "author": "Christopher D Luber",
   "license": "ISC",
@@ -33,6 +40,11 @@
     "mongoose": "^5.5.10",
     "path": "^0.12.7",
     "tmi.js": "^1.4.2",
-    "xmlhttprequest": "^1.8.0"
+    "xmlhttprequest": "^1.8.0",
+    "ejs": "^2.5.6"
+  },
+  "devDependencies": {
+    "request": "^2.81.0",
+    "tape": "^4.7.0"
   }
 }
