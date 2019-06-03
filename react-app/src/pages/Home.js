@@ -1,11 +1,13 @@
 import React, { Component } from "react";
+import "./home.css";
 
 class Home extends Component {
   // initialize our state
   state = {
     counts: [],
     users: [],
-    encounters: []
+    encounters: [],
+    intervalIsSet: false
   };
 
   // when component mounts, first thing it does is fetch all existing data in our db
@@ -13,11 +15,20 @@ class Home extends Component {
   // changed and implement those changes into our UI
   componentDidMount() {
     this.getDataFromDb();
+    if (!this.state.intervalIsSet) {
+      let interval = setInterval(this.getDataFromDb, 1000);
+      this.setState({ intervalIsSet: interval });
+    }
   }
 
   // never let a process live forever
   // always kill a process everytime we are done using it
-  componentWillUnmount() {}
+  componentWillUnmount() {
+    if (this.state.intervalIsSet) {
+      clearInterval(this.state.intervalIsSet);
+      this.setState({ intervalIsSet: null });
+    }
+  }
 
   getDataFromDb = () => {
     fetch("/api/getCounts")
@@ -36,39 +47,57 @@ class Home extends Component {
   render() {
     const { counts, users, encounters } = this.state;
     return (
-      <div>
-        <h1>Counts:</h1>
-        <ul>
-          {counts.map(r => {
-            return (
-              <li>
-                {r.name}: {r.total}
-              </li>
-            );
-          })}
-        </ul>
-
-        <h1>Users:</h1>
-        <ul>
-          {users.map(r => {
-            return (
-              <li>
-                {r.name}: {r.chats}
-              </li>
-            );
-          })}
-        </ul>
-        <h1>Encounters:</h1>
-        <ul>
-          {encounters.map(r => {
-            console.log(r.name);
-            return (
-              <li>
-                {r.player.name}: {r.monster.name}
-              </li>
-            );
-          })}
-        </ul>
+      <div id="home-main">
+        <span />
+        <div id="navbar">
+          <a href="https://www.twitch.tv/keeelaan" target="_blank">Keeelaan</a>
+          <a href="https://www.twitch.tv/lubesy" target="_blank">Lubesy</a>
+          <a href="https://www.twitch.tv/drewbertdoo" target="_blank">DrewbertDoo</a>
+          <a href="https://www.twitch.tv/sethe_1" target="_blank">Sethe_1</a>
+          <a href="https://www.twitch.tv/lessthandennis" target="_blank">LessThanDennis</a>
+        </div>
+        <div class="jumbotron">
+          FAMILY TIME
+        </div>
+        <div id="stats">
+          <div>
+            <h1>Counts:</h1>
+            <ul>
+              {counts.map(r => {
+                return (
+                  <li>
+                    {r.name}: {r.total}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <h1>Users:</h1>
+            <ul>
+              {users.map(r => {
+                return (
+                  <li>
+                    {r.name}, {r.class}: {r.chats}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+          <div>
+            <h1>Encounters:</h1>
+            <ul>
+              {encounters.map(r => {
+                console.log(r.name);
+                return (
+                  <li>
+                    {r.player.name}: {r.monster.name}
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
       </div>
     );
   }
