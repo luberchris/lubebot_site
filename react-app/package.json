@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "concurrently": "^4.1.0",
     "gridfs": "^1.0.0",
     "mammoth": "^1.4.8",
@@ -11,7 +11,7 @@
     "react": "^16.5.0",
     "react-dom": "^16.5.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "1.1.5"
+    "react-scripts": "^3.0.1"
   },
   "scripts": {
     "start": "concurrently \"cd backend && node server.js\" \"react-scripts start\"",
@@ -33,5 +33,17 @@
   "bugs": {
     "url": "https://github.com/luberchris/edberry/issues"
   },
-  "homepage": "https://github.com/luberchris/edberry#readme"
+  "homepage": "https://github.com/luberchris/edberry#readme",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
