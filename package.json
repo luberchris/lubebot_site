@@ -3,37 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.18.1",
-    "concurrently": "^4.1.0",
-    "gridfs": "^1.0.0",
-    "http-proxy-middleware": "^0.19.1",
-    "mammoth": "^1.4.8",
-    "path": "^0.12.7",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.0.1"
+    "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "concurrently \"cd backend && node server.js\" \"react-scripts start\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/luberchris/lubebot_site.git"
+  "eslintConfig": {
+    "extends": "react-app"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/luberchris/lubebot_site/issues"
-  },
-  "homepage": "https://github.com/luberchris/lubebot_site#readme",
   "browserslist": {
     "production": [
       ">0.2%",
