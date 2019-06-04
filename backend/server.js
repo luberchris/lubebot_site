@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
   Data = require("./models"),
   cors = require("cors");
 
-const API_PORT = 3001 || process.env.PORT,
+const API_PORT = process.env.PORT || 3001,
   app = express(),
   router = express.Router();
 
@@ -15,6 +15,14 @@ app
   .use(bodyParser.json())
   .use(logger("dev"))
   .use(cors());
+
+if (process.env.NODE_ENV === "production") {
+  // Express will serve up production assets
+  app.use(express.static("build"));
+
+  // Express will serve up the front-end index.html file if it doesn't recognize the route
+  app.get("*", (req, res) => res.sendFile(path.resolve("build", "index.html")));
+}
 
 // this is our MongoDB database
 const dbRoute =

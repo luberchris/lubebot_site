@@ -6,6 +6,7 @@
     "axios": "^0.18.1",
     "concurrently": "^4.1.0",
     "gridfs": "^1.0.0",
+    "http-proxy-middleware": "^0.19.1",
     "mammoth": "^1.4.8",
     "path": "^0.12.7",
     "react": "^16.5.0",
@@ -29,7 +30,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "proxy": "http://localhost:3001",
   "bugs": {
     "url": "https://github.com/luberchris/lubebot_site/issues"
   },

@@ -9,6 +9,12 @@ import {
 import Home from "./pages/Home";
 
 class App extends Component {
+  state = {
+    message: "",
+    error: "",
+    eee: "",
+    text: ""
+  };
   // constructor(props) {
   //   super(props);
   // }
@@ -16,11 +22,22 @@ class App extends Component {
   // when component mounts, first thing it does is fetch all existing data in our db
   // then we incorporate a polling logic so that we can easily see if our db has
   // changed and implement those changes into our UI
-  componentDidMount() {}
+  componentDidMount = () => this.fetchAPIMessage();
 
   // never let a process live forever
   // always kill a process everytime we are done using it
   componentWillUnmount() {}
+
+  fetchAPIMessage = async () => {
+    try {
+      const res = await fetch(`/api/message`);
+      const { message } = await res.json();
+      this.setState({ message });
+      console.log(message);
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
   render() {
     return (
