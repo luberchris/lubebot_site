@@ -29,6 +29,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "proxy": "http://localhost:3001",
   "bugs": {
     "url": "https://github.com/luberchris/lubebot_site/issues"
   },
