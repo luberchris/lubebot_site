@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
   Data = require("./models"),
   cors = require("cors");
 
-const API_PORT = 3001,
+const API_PORT = 3001 || process.env.PORT,
   app = express(),
   router = express.Router();
 
