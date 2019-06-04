@@ -4,7 +4,8 @@ const mongoose = require("mongoose"),
   bodyParser = require("body-parser"),
   logger = require("morgan"),
   Data = require("./models"),
-  cors = require("cors");
+  cors = require("cors"),
+  path = require("path");
 
 const API_PORT = process.env.PORT || 3001,
   app = express(),
