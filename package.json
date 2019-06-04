@@ -25,15 +25,15 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luberchris/edberry.git"
+    "url": "git+https://github.com/luberchris/lubebot_site.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luberchris/edberry/issues"
+    "url": "https://github.com/luberchris/lubebot_site/issues"
   },
-  "homepage": "https://github.com/luberchris/edberry#readme",
+  "homepage": "https://github.com/luberchris/lubebot_site#readme",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -45,8 +45,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devServer": {
-    "disableHostCheck": true
   }
 }
