@@ -49,21 +49,40 @@ class Home extends Component {
     const { counts, users, encounters } = this.state;
     return (
       <div id="home-main">
-        <span />
         <div id="navbar">
-          <a href="https://www.twitch.tv/keeelaan" target="_blank">
+          <a
+            href="https://www.twitch.tv/keeelaan"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Keeelaan
           </a>
-          <a href="https://www.twitch.tv/lubesy" target="_blank">
+          <a
+            href="https://www.twitch.tv/lubesy"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Lubesy
           </a>
-          <a href="https://www.twitch.tv/drewbertdoo" target="_blank">
+          <a
+            href="https://www.twitch.tv/drewbertdoo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             DrewbertDoo
           </a>
-          <a href="https://www.twitch.tv/sethe_1" target="_blank">
+          <a
+            href="https://www.twitch.tv/sethe_1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Sethe_1
           </a>
-          <a href="https://www.twitch.tv/lessthandennis" target="_blank">
+          <a
+            href="https://www.twitch.tv/lessthandennis"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LessThanDennis
           </a>
         </div>
