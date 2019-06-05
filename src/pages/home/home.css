@@ -1,0 +1,40 @@
+.jumbotron {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7289da;
+  height: 25vw;
+  width: 100vw;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1vw;
+  background-color: #7289da;
+  border: 2px #65869c solid;
+  border-radius: 2px;
+  padding: 1vw;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+.link:hover {
+  margin-bottom: 5px;
+  margin-top: -5px;
+  box-shadow: 7px 7px 3px #23272a;
+}
+
+#home-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1vw;
+}
