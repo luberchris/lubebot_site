@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Navbar from "../../partials/navbar/Navbar";
 import "./home.css";
 
 class Home extends Component {
@@ -9,23 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div id="home-page">
-        <div id="navbar">
-          <a href="/lubesy" className="link">
-            Lubesy
-          </a>
-          <a href="/drewbertdoo" className="link">
-            DrewbertDoo
-          </a>
-          <a href="/keeelaan" className="link">
-            Keeelaan
-          </a>
-          <a href="/sethe_1" className="link">
-            Sethe_1
-          </a>
-          <a href="/lessthandennis" className="link">
-            LessThanDennis
-          </a>
-        </div>
+        <Navbar />
         <div className="jumbotron">
           <h1>WELCOME</h1>
         </div>

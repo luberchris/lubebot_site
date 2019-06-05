@@ -1,0 +1,17 @@
+.navbar-section {
+  display: flex;
+  align-items: center;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vw;
+}
+
+#twitch {
+  height: 3vw;
+  width: 3vw;
+  color: #6441a4;
+  padding-right: 1vw;
+}
