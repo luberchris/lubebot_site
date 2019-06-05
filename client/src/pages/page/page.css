@@ -1,0 +1,13 @@
+.page-section {
+  display: flex;
+  justify-content: center;
+}
+
+.page-section .link {
+  width: 6vw;
+}
+
+#page-page {
+  display: flex;
+  flex-direction: column;
+}

@@ -8,6 +8,7 @@ import {
 import "./App.css";
 import Home from "./pages/home/Home";
 import Page from "./pages/page/Page";
+import Info from "./pages/info/Info";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/dads/:id" component={Page} />
+        <Route exact path="/dads/:id/info/:info" component={Info} />
       </Switch>
     </Router>
   );

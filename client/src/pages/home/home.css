@@ -2,10 +2,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #6441A4;
+  background-color: #6441a4;
   height: 25vw;
   width: 100vw;
   color: white;
+  margin-bottom: 1vw;
 }
 
 #home-page {
