@@ -3,6 +3,27 @@
   align-items: center;
 }
 
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1vw;
+  background-color: #6441a4;
+  border: 2px #67538b solid;
+  border-radius: 2px;
+  padding: 1vw;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+
+.link:hover {
+  margin-bottom: 5px;
+  margin-top: -5px;
+  box-shadow: 7px 7px 7px gray;
+}
+
 #navbar {
   display: flex;
   justify-content: space-between;

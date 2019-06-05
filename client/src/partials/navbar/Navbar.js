@@ -11,24 +11,30 @@ class Navbar extends Component {
     return (
       <div id="navbar">
         <div class="navbar-section">
-          <a href="/lubesy" className="link">
+          <a href="/dads/lubesy" className="link">
             Lubesy
           </a>
-          <a href="/drewbertdoo" className="link">
+          <a href="/dads/drewbertdoo" className="link">
             DrewbertDoo
           </a>
-          <a href="/keeelaan" className="link">
+          <a href="/dads/keeelaan" className="link">
             Keeelaan
           </a>
-          <a href="/sethe_1" className="link">
+          <a href="/dads/sethe_1" className="link">
             Sethe_1
           </a>
-          <a href="/lessthandennis" className="link">
+          <a href="/dads/lessthandennis" className="link">
             LessThanDennis
           </a>
         </div>
         <div class="navbar-section">
-          <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch"/>
+          <a
+            href="https://www.twitch.tv/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" />
+          </a>
         </div>
       </div>
     );
