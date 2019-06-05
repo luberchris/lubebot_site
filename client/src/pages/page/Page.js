@@ -1,28 +1,29 @@
 import React, { Component } from "react";
-import "./home.css";
+import "./page.css";
 
-class Home extends Component {
+class Page extends Component {
   componentDidMount() {}
 
   componentWillUnmount() {}
 
   render() {
     return (
-      <div id="home-page">
+      <div id="page-page">
+        <h1>TESTING PAGE</h1>
         <div id="navbar">
-          <a href="https://www.twitch.tv/lubesy" className="link">
+          <a href="/lubesy" className="link">
             Lubesy
           </a>
-          <a href="https://www.twitch.tv/drewbertdoo" className="link">
+          <a href="/drewbertdoo" className="link">
             DrewbertDoo
           </a>
-          <a href="https://www.twitch.tv/keeelaan" className="link">
+          <a href="/keeelaan" className="link">
             Keeelaan
           </a>
-          <a href="https://www.twitch.tv/sethe_1" className="link">
+          <a href="/sethe_1" className="link">
             Sethe_1
           </a>
-          <a href="https://www.twitch.tv/lessthandennis" className="link">
+          <a href="/lessthandennis" className="link">
             LessThanDennis
           </a>
         </div>
@@ -35,4 +36,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default Page;

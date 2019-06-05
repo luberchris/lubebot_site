@@ -1,32 +1,24 @@
 {
-  "name": "client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "lubebot_site",
+  "version": "1.0.0",
+  "description": "website for LubeChatBot, for use by friends and viewers",
+  "main": "server.js",
   "dependencies": {
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-router-dom": "^5.0.0",
-    "react-scripts": "3.0.1"
+    "concurrently": "^4.1.0"
   },
+  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node server.js\" \"cd client && npm start\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luberchris/lubechatbot.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+  "author": "Christopher Luber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luberchris/lubechatbot/issues"
+  },
+  "homepage": "https://github.com/luberchris/lubechatbot#readme"
 }

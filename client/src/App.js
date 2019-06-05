@@ -7,12 +7,14 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
+import Page from "./pages/page/Page";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/dads/:id" component={Page} />
       </Switch>
     </Router>
   );
