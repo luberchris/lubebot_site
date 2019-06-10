@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../../partials/navbar/Navbar";
+import Footer from "../../partials/footer/Footer";
 import "./home.css";
 
 class Home extends Component {
@@ -15,6 +16,7 @@ class Home extends Component {
           <h1>WELCOME</h1>
         </div>
         <p>test</p>
+        <Footer />
       </div>
     );
   }

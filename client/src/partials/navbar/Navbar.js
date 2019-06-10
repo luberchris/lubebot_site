@@ -35,7 +35,7 @@ class Navbar extends Component {
           >
             <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" />
           </a>
-          <h3>/{this.props.page}</h3>
+          <h3>{this.props.page ? "/" + this.props.page : ""}</h3>
         </div>
       </div>
     );

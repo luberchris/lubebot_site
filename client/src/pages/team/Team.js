@@ -1,9 +1,9 @@
 import React, { Component, Link } from "react";
 import Navbar from "../../partials/navbar/Navbar";
 import Footer from "../../partials/footer/Footer";
-import "./page.css";
+import "./team.css";
 
-class Page extends Component {
+class Team extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,7 +23,7 @@ class Page extends Component {
 
   render() {
     return (
-      <div id="page-page">
+      <div id="page-team">
         <Navbar page={this.state.user} />
         <div className="jumbotron">
           <h1>{this.state.user}</h1>
@@ -57,4 +57,4 @@ class Page extends Component {
   }
 }
 
-export default Page;
+export default Team;
