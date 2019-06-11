@@ -17,7 +17,7 @@ class Info extends Component {
       match: { params }
     } = this.props;
 
-    this.setState({ info: params.info, user: params.id });
+    this.setState({ info: params.info, user: params.user });
   }
 
   componentWillUnmount() {}
@@ -26,7 +26,7 @@ class Info extends Component {
     return (
       <div id="page-page">
         <Navbar page={this.state.user} />
-        <div className="page-section">{this.state.info}</div>
+        <div className="page-section">This is where our {this.state.info} information goes</div>
         <Footer />
       </div>
     );

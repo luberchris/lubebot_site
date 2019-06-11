@@ -10,7 +10,14 @@ class Navbar extends Component {
   render() {
     return (
       <div id="navbar">
-        <div class="navbar-section">
+        <div className="navbar-section">
+          {this.props.page ? (
+            <a href="/" className="link" id="home-brand-button">
+              Home
+            </a>
+          ) : (
+            ""
+          )}
           <a href="/dads/lubesy" className="link">
             Lubesy
           </a>
@@ -27,7 +34,7 @@ class Navbar extends Component {
             LessThanDennis
           </a>
         </div>
-        <div class="navbar-section">
+        <div className="navbar-section">
           <a
             href="https://www.twitch.tv/"
             target="_blank"
