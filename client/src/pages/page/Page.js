@@ -7,6 +7,7 @@ class Page extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      auth: false,
       user: ""
     };
   }
@@ -16,7 +17,7 @@ class Page extends Component {
       match: { params }
     } = this.props;
 
-    this.setState({ user: params.id });
+    this.setState({ user: params.user });
   }
 
   componentWillUnmount() {}
@@ -28,24 +29,25 @@ class Page extends Component {
         <div className="jumbotron">
           <h1>{this.state.user}</h1>
         </div>
+        {/* Pull assigned pages for each person */}
         <div className="page-section">
           <a href={`/dads/${this.state.user}/charity`} className="link">
-            CHARITY
+            Charity
           </a>
           <a href={`/dads/${this.state.user}/about`} className="link">
-            ABOUT
+            About
           </a>
           <a href={`/dads/${this.state.user}/setup`} className="link">
-            SETUP
+            Setup
           </a>
           <a href={`/dads/${this.state.user}/donate`} className="link">
-            DONATE
+            Donate
           </a>
           <a href={`/dads/${this.state.user}/rules`} className="link">
-            RULES
+            Rules
           </a>
           <a href={`/dads/${this.state.user}/social`} className="link">
-            SOCIAL
+            Social
           </a>
           <a href={`/dads/${this.state.user}/faq`} className="link">
             FAQ

@@ -14,8 +14,9 @@ class Home extends Component {
         <Navbar />
         <div className="jumbotron">
           <h1>WELCOME</h1>
+          <h2>to</h2>
+          <h1>TEAM UNOFFICIAL</h1>
         </div>
-        <p>test</p>
         <Footer />
       </div>
     );
