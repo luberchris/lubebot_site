@@ -29,7 +29,7 @@ class Navbar extends Component {
         </div>
         <div class="navbar-section">
           <a
-            href="https://www.twitch.tv/"
+            href={this.props.page ? "https://www.twitch.tv/" + this.props.page : "https://www.twitch.tv/"} 
             target="_blank"
             rel="noopener noreferrer"
           >

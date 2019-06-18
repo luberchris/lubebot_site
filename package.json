@@ -4,7 +4,8 @@
   "description": "website for LubeChatBot, for use by friends and viewers",
   "main": "server.js",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "mongoose": "^5.6.0"
   },
   "devDependencies": {},
   "scripts": {
