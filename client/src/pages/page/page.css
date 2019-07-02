@@ -1,6 +1,7 @@
 .page-section {
   display: flex;
   justify-content: center;
+  padding-bottom: 5vw;
 }
 
 .page-section .link {
@@ -12,6 +13,12 @@
   flex-direction: column;
 }
 
+#watch-me {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 1vw;
+}
+
 @media only screen and (max-width: 600px) {
-  
 }

@@ -17,6 +17,17 @@ class Page extends Component {
       match: { params }
     } = this.props;
 
+    let embed;
+    const script = document.createElement("script");
+    script.setAttribute("src", "https://embed.twitch.tv/embed/v1.js");
+    script.addEventListener("load", () => {
+      embed = new window.Twitch.Embed(this.props.targetID, {
+        ...this.props,
+        channel: params.user
+      });
+    });
+    document.body.appendChild(script);
+
     this.setState({ user: params.user });
   }
 
@@ -26,9 +37,22 @@ class Page extends Component {
     return (
       <div id="page-page">
         <Navbar page={this.state.user} />
-        <div className="jumbotron">
-          <h1>{this.state.user}</h1>
+        <div id="watch-me">
+          {/* <h1>{this.state.user}</h1>
+          <div>
+            <div id={this.props.targetID} />
+          </div> */}
+          <iframe
+            title="stream_view"
+            src={`https://player.twitch.tv/?channel=${this.state.user}`}
+            height="540"
+            width="960"
+            frameborder="0"
+            scrolling="no"
+            allowfullscreen="true"
+          />
         </div>
+
         {/* Pull assigned pages for each person */}
         <div className="page-section">
           <a href={`/dads/${this.state.user}/charity`} className="link">
@@ -53,10 +77,17 @@ class Page extends Component {
             FAQ
           </a>
         </div>
+
         <Footer />
       </div>
     );
   }
 }
+
+Page.defaultProps = {
+  targetID: "twitch-embed",
+  width: "1000",
+  height: "400"
+};
 
 export default Page;
