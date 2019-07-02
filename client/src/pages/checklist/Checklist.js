@@ -20,14 +20,14 @@ class Checklist extends Component {
             </li>
             <li>
               <input name="test" type="checkbox" />
-              <a href="https://www.speedtest.net/" target="_blank">
+              <a href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
                 Speedtest
               </a>
             </li>
             <h2>OBS</h2>
             <li>
               <input name="test" type="checkbox" />
-              <a href="https://streamlabs.com/" target="_blank">
+              <a href="https://streamlabs.com/" target="_blank" rel="noopener noreferrer">
                 Live notifications
               </a>
             </li>
