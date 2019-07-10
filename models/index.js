@@ -1,6 +1,7 @@
 module.exports = {
-  Quote: require("./Quote"),
-  User: require("./User"),
   Count: require("./Count"),
-  Encounter: require("./Encounter")
+  Encounter: require("./Encounter"),
+  Quote: require("./Quote"),
+  Site: require("./Site"),
+  User: require("./User")
 };
