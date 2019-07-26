@@ -1,10 +1,22 @@
+.card {
+  display: flex;
+  border: solid #6441a4;
+  padding: 1vw;
+  margin: 0 2vw;
+  border-radius: 5px;
+  background-color: #fdfdfd;
+  width: 25vw;
+  justify-content: center;
+  align-items: center;
+}
+
 .jumbotron {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #6441a4;
-  height: 25vw;
+  height: 33vw;
   width: 100vw;
   color: white;
   margin-bottom: 1vw;
@@ -20,6 +32,19 @@
   -ms-animation: fadein 2s; Internet Explorer
   -o-animation: fadein 2s; Opera < 12.1
   animation: fadein 2s; */
+}
+
+#info-jumbotron {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  color: #6441a4;
+}
+
+#schedules {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 /* @keyframes fadein {
