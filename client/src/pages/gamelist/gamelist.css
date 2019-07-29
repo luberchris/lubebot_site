@@ -1,0 +1,112 @@
+.game-card {
+  padding: 1vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid black 5px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.game-preview {
+}
+
+.game-row {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 18vw;
+  overflow: auto;
+}
+
+.game-window {
+  height: 8vw;
+  border-radius: 5px;
+  box-shadow: 8px 8px 5px grey;
+}
+
+.media-wrapper {
+  display: inline;
+}
+
+.media-wrapper #twitch {
+  height: 2vw;
+  width: 2vw;
+  margin: 0;
+  padding: 0;
+}
+
+#page-giveaway {
+  font-weight: 1000;
+  color: black;
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#steam {
+  height: 2vw;
+  width: 2vw;
+  color: rgb(0, 0, 0);
+  padding-top: 1vw;
+}
+
+#v-s {
+  height: 2vw;
+  width: 2vw;
+  color: #1ab7ea;
+  padding-top: 1vw;
+}
+
+#yt-s {
+  height: 2vw;
+  width: 2vw;
+  color: #ff0000;
+  padding-top: 1vw;
+}
+
+@media only screen and (max-width: 1399px) {
+  p {
+    padding: 0px;
+    margin: 0px;
+  }
+  .game-card {
+    background-color: transparent;
+    border: none;
+    padding: 0px;
+  }
+  .game-container {
+    display: block;
+  }
+  .game-row {
+    display: block;
+    height: auto;
+  }
+  .game-window {
+    visibility: collapse;
+    height: 0;
+  }
+  .media-wrapper {
+    visibility: hidden;
+  }
+  #page-giveaway {
+    background-color: white;
+  }
+  #steam {
+    visibility: hidden;
+  }
+  #v-s {
+    visibility: collapse;
+    height: 0;
+  }
+
+  #yt-s {
+    visibility: collapse;
+    height: 0;
+  }
+}

@@ -11,6 +11,7 @@ import Page from "./pages/page/Page";
 import Info from "./pages/info/Info";
 import Team from "./pages/team/Team";
 import Checklist from "./pages/checklist/Checklist";
+import Gamelist from "./pages/gamelist/Gamelist";
 import Giveaway from "./pages/giveaway/Giveaway";
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/dads/:user" component={Page} />
         <Route exact path="/dads/:user/:info" component={Info} />
         <Route exact path="/checklist" component={Checklist} />
+        <Route exact path="/gamelist" component={Gamelist} />
         <Route exact path="/giveaway" component={Giveaway} />
       </Switch>
     </Router>
