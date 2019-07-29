@@ -22,11 +22,35 @@ class Info extends Component {
 
   componentWillUnmount() {}
 
+  renderSwitch(param) {
+    switch (param) {
+      case "about":
+        break;
+      case "charity":
+        break;
+      case "donate":
+        break;
+      case "faq":
+        break;
+      case "rules":
+        break;
+      case "setup":
+        break;
+      case "social":
+        break;
+      default:
+        break;
+    }
+  }
+
   render() {
     return (
       <div id="page-page">
         <Navbar page={this.state.user} />
-        <div className="page-section">This is where our {this.state.info} information goes</div>
+
+        <div className="page-section">
+          This is where our {this.state.info} information goes
+        </div>
         <Footer />
       </div>
     );

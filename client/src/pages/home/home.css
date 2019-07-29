@@ -12,8 +12,6 @@
 
 .jumbotron {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #6441a4;
   height: 33vw;
@@ -21,6 +19,25 @@
   color: white;
   margin-bottom: 1vw;
   padding: 10px;
+}
+
+.slide-link {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  padding: 4vw 1vw;
+  margin-left: -1vw;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+
+.slide-link:hover {
+  background-color: red;
+  -webkit-transform: translate(25%, 0%);
+  -ms-transform: translate(25%, 0%);
+  transform: translate(25%, 0%);
+  border-radius: 50%;
+  text-align: center;
 }
 
 #home-page {
@@ -34,17 +51,17 @@
   animation: fadein 2s; */
 }
 
-#info-jumbotron {
+#home-team {
+  left: 0;
   display: flex;
   flex-direction: column;
-  background-color: white;
-  color: #6441a4;
 }
 
-#schedules {
+#welcome {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  margin-left: 25%;
 }
 
 /* @keyframes fadein {

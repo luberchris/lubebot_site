@@ -18,7 +18,13 @@ class Navbar extends Component {
           ) : (
             ""
           )}
-          <a href="/dads/lubesy" className="link">
+          <a href="/dads" className="link">
+            Team
+          </a>
+          <a href="/watch" className="link">
+            Watch
+          </a>
+          {/* <a href="/dads/lubesy" className="link">
             Lubesy
           </a>
           <a href="/dads/drewbertdoo" className="link">
@@ -26,17 +32,21 @@ class Navbar extends Component {
           </a>
           <a href="/dads/keeelaan" className="link">
             Keeelaan
-          </a>
-          <a href="/dads/sethe_1" className="link">
+          </a> */}
+          {/* <a href="/dads/sethe_1" className="link">
             Sethe_1
           </a>
           <a href="/dads/lessthandennis" className="link">
             LessThanDennis
-          </a>
+          </a> */}
         </div>
         <div className="navbar-section">
           <a
-            href={this.props.page ? "https://www.twitch.tv/" + this.props.page : "https://www.twitch.tv/"} 
+            href={
+              this.props.page
+                ? "https://www.twitch.tv/" + this.props.page
+                : "https://www.twitch.tv/"
+            }
             target="_blank"
             rel="noopener noreferrer"
           >

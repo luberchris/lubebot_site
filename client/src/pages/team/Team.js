@@ -6,17 +6,13 @@ import "./team.css";
 class Team extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      user: ""
-    };
+    this.state = {};
   }
 
   componentDidMount() {
-    const {
-      match: { params }
-    } = this.props;
-
-    this.setState({ user: params.id });
+    // const {
+    //   match: { params }
+    // } = this.props;
   }
 
   componentWillUnmount() {}
@@ -24,32 +20,17 @@ class Team extends Component {
   render() {
     return (
       <div id="page-team">
-        <Navbar page={this.state.user} />
-        <div className="jumbotron">
-          <h1>{this.state.user}</h1>
-        </div>
-        <div className="page-section">
-          <a href={`/dads/${this.state.user}/charity`} className="link">
-            CHARITY
-          </a>
-          <a href={`/dads/${this.state.user}/about`} className="link">
-            ABOUT
-          </a>
-          <a href={`/dads/${this.state.user}/setup`} className="link">
-            SETUP
-          </a>
-          <a href={`/dads/${this.state.user}/donate`} className="link">
-            DONATE
-          </a>
-          <a href={`/dads/${this.state.user}/rules`} className="link">
-            RULES
-          </a>
-          <a href={`/dads/${this.state.user}/social`} className="link">
-            SOCIAL
-          </a>
-          <a href={`/dads/${this.state.user}/faq`} className="link">
-            FAQ
-          </a>
+        <Navbar />
+        <div id="team-section">
+          <div className="card" id="drew-card">
+            DrewbertDoo
+          </div>
+          <div className="card" id="keelan-card">
+            Keeelaan
+          </div>
+          <div className="card" id="luber-card">
+            Lubesy
+          </div>
         </div>
         <Footer />
       </div>
