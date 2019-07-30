@@ -40,6 +40,14 @@
   text-align: center;
 }
 
+/* #drewbertdoo {
+  transition: 0.5s ease;
+}
+
+#drewbertdoo:hover {
+  background-image: url("../../assets/drewbertdoo_avatar.png");
+} */
+
 #home-page {
   display: flex;
   flex-direction: column;
@@ -56,6 +64,23 @@
   display: flex;
   flex-direction: column;
 }
+
+/* #keeelaan {
+  transition: 0.5s ease;
+  animation: fadein 2s;
+}
+
+#keeelaan:hover {
+  background-image: url("../../assets/keeelaan_avatar.png");
+} */
+
+/* #lubesy {
+  transition: opacity 0.5s ease in;
+}
+
+#lubesy:hover {
+  background-image: url("../../assets/lubesy_avatar.png");
+} */
 
 #welcome {
   display: flex;

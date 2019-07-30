@@ -43,9 +43,9 @@ class Home extends Component {
         <Navbar />
         <div className="jumbotron">
           <div id="home-team">
-            <a className="slide-link" href="/dads/drewbertdoo">DrewbertDoo</a>
-            <a className="slide-link" href="/dads/keeelaan">Keeelaan</a>
-            <a className="slide-link" href="/dads/lubesy">Lubesy</a>
+            <a className="slide-link" href="/dads/drewbertdoo" id="drewbertdoo">DrewbertDoo</a>
+            <a className="slide-link" href="/dads/keeelaan" id="keeelaan">Keeelaan</a>
+            <a className="slide-link" href="/dads/lubesy" id="lubesy">Lubesy</a>
           </div>
           <div id="welcome">
             <h1>WELCOME to TEAM UNOFFICIAL</h1>
