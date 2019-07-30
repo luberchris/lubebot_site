@@ -25,33 +25,6 @@ class Giveaway extends Component {
         <div className="game-container">
           <div className="game-row">
             <div className="game-card">
-              <p>Kingdom Come: Deliverance</p>
-              <img
-                className="game-window"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Kingdom_Come_Deliverance.jpg/220px-Kingdom_Come_Deliverance.jpg"
-                alt=""
-                title="Kingdom Come: Deliverance is a story-driven open-world RPG that immerses you in an epic adventure in the Holy Roman Empire. Avenge your parents' death as you battle invading forces, go on game-changing quests, and make influential choices."
-              />
-              <div className="media-wrapper">
-                <a
-                  className="game-preview"
-                  href="https://www.youtube.com/watch?v=ZOkd-Lmmcb4"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-                </a>
-                <a
-                  className="game-preview"
-                  href="https://store.steampowered.com/app/215690/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
-                </a>
-              </div>
-            </div>
-            <div className="game-card">
               <p>Surviving Mars</p>
               {/* change me */}
               <img
