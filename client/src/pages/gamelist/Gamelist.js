@@ -1573,6 +1573,23 @@ class Gamelist extends Component {
                 <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
               </a>
             </div>
+            <div className="game-card">
+              <p>Age of Empires II</p>
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png/220px-Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png"
+                alt=""
+                title="Age of Empires II: The Age of Kings is a real-time strategy video game developed by Ensemble Studios and published by Microsoft. Released in 1999 for Microsoft Windows and Macintosh, it is the second game in the Age of Empires series."
+              />
+              <a
+                className="game-preview"
+                href="https://www.youtube.com/watch?v=q4Okg0qy5Oc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+              </a>
+            </div>
           </div>
         </div>
 
