@@ -23,6 +23,40 @@ class Gamelist extends Component {
       <div id="page-giveaway">
         {/* <Navbar /> */}
         <div className="game-container">
+          <div id="game-intro">
+            <h1>LUBESY'S GAMELIST</h1>
+            <p>
+              Below is a list of games that I own and am willing to play on
+              stream.
+            </p>
+            <p>As I purchase games, I will add them to this list.</p>
+            <p>
+              Once every two weeks, we raffle a "Viewer's Pick" game to be
+              played on stream the following week. If you are a winner, please
+              select one of these games and let me know which you'd like to see
+              me play!
+            </p>
+            <br />
+            <h2>TIPS</h2>
+            <ol>
+              <li>Hover over a game cover to see its description</li>
+              <li>
+                Click the{" "}
+                <div className="media-wrapper">
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />{" "}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />{" "}
+                  <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" /> or{" "}
+                  <FontAwesomeIcon icon={["fab", "vimeo-square"]} id="v-s" />
+                </div>{" "}
+                to see gameplay or a trailer
+              </li>
+              <br />
+              <li>
+                For a list of games that I'm giving away, click{" "}
+                <a href="/giveaway">here</a>
+              </li>
+            </ol>
+          </div>
           <div className="game-row">
             <div className="game-card">
               <p>The 39 Steps</p>
@@ -82,7 +116,24 @@ class Gamelist extends Component {
               </a>
             </div>
             <div className="game-card">
-              <p>Age of Empires III: Complete Collection</p>
+              <p>Age of Empires II</p>
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png/220px-Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png"
+                alt=""
+                title="Age of Empires II: The Age of Kings is a real-time strategy video game developed by Ensemble Studios and published by Microsoft. Released in 1999 for Microsoft Windows and Macintosh, it is the second game in the Age of Empires series."
+              />
+              <a
+                className="game-preview"
+                href="https://www.youtube.com/watch?v=q4Okg0qy5Oc"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+              </a>
+            </div>
+            <div className="game-card">
+              <p>Age of Empires III</p>
               {/* change me */}
               <img
                 className="game-window"
@@ -1573,17 +1624,19 @@ class Gamelist extends Component {
                 <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
               </a>
             </div>
+          </div>
+          <div class="game-row">
             <div className="game-card">
-              <p>Age of Empires II</p>
+              <p>Getting Over It</p>
               <img
                 className="game-window"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png/220px-Age_of_Empires_II_-_The_Age_of_Kings_Coverart.png"
+                src="https://www.mobygames.com/images/covers/l/441035-getting-over-it-with-bennett-foddy-macintosh-front-cover.jpg"
                 alt=""
-                title="Age of Empires II: The Age of Kings is a real-time strategy video game developed by Ensemble Studios and published by Microsoft. Released in 1999 for Microsoft Windows and Macintosh, it is the second game in the Age of Empires series."
+                title="A game I made for a certain kind of person. To hurt them."
               />
               <a
                 className="game-preview"
-                href="https://www.youtube.com/watch?v=q4Okg0qy5Oc"
+                href="https://www.youtube.com/watch?v=cCL6tWv_7FM"
                 target="_blank"
                 rel="noopener noreferrer"
               >

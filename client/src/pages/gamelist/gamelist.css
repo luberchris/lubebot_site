@@ -42,6 +42,24 @@
   padding: 0;
 }
 
+#game-intro {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  text-align: justify;
+  margin: 2% auto;
+  padding: 2% 10%;
+  background-color: red;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#game-intro #yt-s {
+  color: white;
+}
+
 #page-giveaway {
   font-weight: 1000;
   color: black;
@@ -93,6 +111,10 @@
   }
   .media-wrapper {
     visibility: hidden;
+  }
+  #game-intro {
+    visibility: hidden;
+    height: 0;
   }
   #page-giveaway {
     background-color: white;

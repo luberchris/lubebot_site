@@ -23,6 +23,38 @@ class Giveaway extends Component {
       <div id="page-giveaway">
         {/* <Navbar /> */}
         <div className="game-container">
+        <div id="game-intro">
+            <h1>LUBESY'S GIVEAWAY LIST</h1>
+            <p>
+              Below is a list of games that I will be giving away.
+            </p>
+            <p>As I acquire codes and Humble Bundles, I will add them to the list.</p>
+            <p>
+              Once every two weeks, we raffle a chance to win a game! If you are a winner, please
+              select one of these games and let me know which you'd like to recieve. Once you claim the code, 
+              let me know if it worked!
+            </p>
+            <br />
+            <h2>TIPS</h2>
+            <ol>
+              <li>Hover over a game cover to see its description</li>
+              <li>
+                Click the{" "}
+                <div className="media-wrapper">
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />{" "}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />{" "}
+                  <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" /> or{" "}
+                  <FontAwesomeIcon icon={["fab", "vimeo-square"]} id="v-s" />
+                </div>{" "}
+                to see gameplay or a trailer
+              </li>
+              <br />
+              <li>
+                For a list of games that I might play on stream, click{" "}
+                <a href="/gamelist">here</a>
+              </li>
+            </ol>
+          </div>
           <div className="game-row">
             <div className="game-card">
               <p>Surviving Mars</p>
