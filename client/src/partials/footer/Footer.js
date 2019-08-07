@@ -15,7 +15,7 @@ class Footer extends Component {
           <div className="site-info-section">
             <h4>Art</h4>
             <a href="/" target="_blank">Splash!</a>
-            <a href="https://www.itshalfpint.com/" target="_blank" rel="noopener noreferrer">Halfpint</a>
+            <a href="https://www.itshalfpint.com/" target="_blank" rel="noopener noreferrer">itsHalfpint</a>
           </div>
           <div className="site-info-section">
             <h4>Site Development</h4>
