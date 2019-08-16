@@ -20,14 +20,24 @@ class Checklist extends Component {
             </li>
             <li>
               <input name="test" type="checkbox" />
-              <a href="https://www.speedtest.net/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://www.speedtest.net/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
                 Speedtest
               </a>
             </li>
             <h2>OBS</h2>
             <li>
               <input name="test" type="checkbox" />
-              <a href="https://streamlabs.com/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://streamlabs.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {" "}
                 Live notifications
               </a>
             </li>
@@ -44,7 +54,8 @@ class Checklist extends Component {
               <input name="test" type="checkbox" /> Notification placement
             </li>
             <li>
-              <input name="test" type="checkbox" /> Starting, Live, and Ending scenes match theme
+              <input name="test" type="checkbox" /> Starting, Live, and Ending
+              scenes match theme
             </li>
             <h2>Environment</h2>
             <li>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "../../partials/navbar/Navbar";
 import Footer from "../../partials/footer/Footer";
-import "./page.css";
+import "./page.scss";
 
 class Page extends Component {
   constructor(props) {
@@ -39,6 +39,7 @@ class Page extends Component {
         <Navbar page={this.state.user} />
         <div id="watch-me">
           <iframe
+          id="stream-view"
             title="stream_view"
             src={`https://player.twitch.tv/?channel=${this.state.user}`}
             height="540"
@@ -47,7 +48,7 @@ class Page extends Component {
             scrolling="no"
             allowFullScreen={true}
           />
-          <iframe
+          {/* <iframe
             title="chat"
             frameBorder="0"
             scrolling="no"
@@ -55,7 +56,7 @@ class Page extends Component {
             src={`https://www.twitch.tv/embed/${this.state.user}/chat`}
             height="540"
             width="350"
-          />
+          /> */}
         </div>
 
         {/* Pull assigned pages for each person */}

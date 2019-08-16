@@ -13,6 +13,7 @@ import Team from "./pages/team/Team";
 import Checklist from "./pages/checklist/Checklist";
 import Gamelist from "./pages/gamelist/Gamelist";
 import Giveaway from "./pages/giveaway/Giveaway";
+import Animation from "./pages/animation/Animation";
 
 function App() {
   return (
@@ -20,11 +21,14 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/dads" component={Team} />
-        <Route exact path="/dads/:user" component={Page} />
-        <Route exact path="/dads/:user/:info" component={Info} />
+        <Route exact path="/watch" component={Checklist} />
+        <Route exact path="/:user" component={Page} />
+        <Route exact path="/:user" component={Page} />
+        <Route exact path="/:user/:info" component={Info} />
         <Route exact path="/checklist" component={Checklist} />
         <Route exact path="/gamelist" component={Gamelist} />
         <Route exact path="/giveaway" component={Giveaway} />
+        <Route exact path="/animations/:animation" component={Animation} />
       </Switch>
     </Router>
   );

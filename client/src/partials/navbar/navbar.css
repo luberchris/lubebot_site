@@ -8,9 +8,9 @@
   justify-content: center;
   align-items: center;
   margin: 0 1vw;
-  background-color: #6441a4;
-  border: 2px #7d5abe solid;
-  border-radius: 2px;
+  background-color: #404040;
+  border: 2px #262626 solid;
+  border-radius: 10px;
   padding: 1vw;
   text-decoration: none;
   color: white;
@@ -21,23 +21,25 @@
 .link:hover {
   margin-bottom: 5px;
   margin-top: -5px;
-  box-shadow: 7px 7px 7px gray;
+  box-shadow: 7px 7px 7px #121212;
 }
 
 #home-brand-button {
-  background-color: #9bbe5a;
-  border-color: #81a441;
+  background-color: #d4af37 ;
+  border-color: #e0c56e;
+  color: black;
 }
 
 #navbar {
   display: flex;
   justify-content: space-between;
   padding: 1vw;
+  padding-bottom: 1.25vw;
 }
 
 #twitch {
   height: 3vw;
   width: 3vw;
-  color: #6441a4;
+  color: white;
   padding-right: 1vw;
 }

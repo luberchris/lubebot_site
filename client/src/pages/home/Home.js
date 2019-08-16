@@ -41,16 +41,23 @@ class Home extends Component {
     return (
       <div id="home-page">
         <Navbar />
-        <div className="jumbotron">
-          <div id="home-team">
-            <a className="slide-link" href="/dads/drewbertdoo" id="drewbertdoo">DrewbertDoo</a>
-            <a className="slide-link" href="/dads/keeelaan" id="keeelaan">Keeelaan</a>
-            <a className="slide-link" href="/dads/lubesy" id="lubesy">Lubesy</a>
-          </div>
+        <div id="home-team">
+          <a className="slide-link" href="/drewbertdoo" id="drewbertdoo">
+            DrewbertDoo
+          </a>
+          <a className="slide-link" href="/keeelaan" id="keeelaan">
+            Keeelaan
+          </a>
+          <a className="slide-link" href="/lubesy" id="lubesy">
+            Lubesy
+          </a>
+        </div>
+        <div id="filler" />
+        {/* <div className="jumbotron">
           <div id="welcome">
             <h1>WELCOME to TEAM UNOFFICIAL</h1>
           </div>
-        </div>
+        </div> */}
         <Footer />
       </div>
     );

@@ -1,3 +1,16 @@
+#checklist-page {
+  color: white;
+}
+
 #checklist-page ul {
   list-style: none;
+}
+
+#checklist-page ul a{
+  text-decoration: none;
+  color: red;
+}
+
+#checklist-page ul a:visited{
+  color: red;
 }
