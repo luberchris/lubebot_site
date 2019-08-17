@@ -33,3 +33,9 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media screen and (max-width: 1025px) {
+  #footer {
+    visibility: hidden;
+  }
+}

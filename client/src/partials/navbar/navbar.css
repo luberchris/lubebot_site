@@ -9,23 +9,25 @@
   align-items: center;
   margin: 0 1vw;
   background-color: #404040;
-  border: 2px #262626 solid;
-  border-radius: 10px;
+  border: 1px #262626 solid;
+  border-radius: 5px;
   padding: 1vw;
+  width: 5vw;
   text-decoration: none;
   color: white;
   transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
+  font-size: 1em;
 }
 
 .link:hover {
   margin-bottom: 5px;
   margin-top: -5px;
-  box-shadow: 7px 7px 7px #121212;
+  /* box-shadow: 7px 7px 7px #121212; */
 }
 
 #home-brand-button {
-  background-color: #d4af37 ;
+  background-color: #d4af37;
   border-color: #e0c56e;
   color: black;
 }
@@ -41,5 +43,13 @@
   height: 3vw;
   width: 3vw;
   color: white;
-  padding-right: 1vw;
+  margin-right: 1vw;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+#twitch:hover {
+  background-color: #d4af37;
+  box-shadow: 0 0 1vw 1vw #d4af37;
+  color: black;
 }

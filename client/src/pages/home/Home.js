@@ -41,6 +41,8 @@ class Home extends Component {
     return (
       <div id="home-page">
         <Navbar />
+        <h1 id="welcome">Team Unofficial</h1>
+
         <div id="home-team">
           <a className="slide-link" href="/drewbertdoo" id="drewbertdoo">
             DrewbertDoo

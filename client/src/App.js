@@ -20,12 +20,11 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/dads" component={Team} />
-        <Route exact path="/watch" component={Checklist} />
-        <Route exact path="/:user" component={Page} />
+        <Route exact path="/team" component={Team} />
+        <Route exact path="/checklist" component={Checklist} />
+        {/* <Route exact path="/watch" component={Checklist} /> */}
         <Route exact path="/:user" component={Page} />
         <Route exact path="/:user/:info" component={Info} />
-        <Route exact path="/checklist" component={Checklist} />
         <Route exact path="/gamelist" component={Gamelist} />
         <Route exact path="/giveaway" component={Giveaway} />
         <Route exact path="/animations/:animation" component={Animation} />

@@ -41,47 +41,19 @@ $main-color: #d4af37;
 #stream-view {
   border-radius: 25px;
   box-shadow: 0 0 0 2px rgba($main-color, 0.5);
-
-  // &::before,
-  // &::after {
-  //   content: "";
-  //   z-index: 5;
-  //   margin: -1 * $clip-distance * 100%;
-  //   box-shadow: 0 0 0 $path-width;
-  //   animation: clipMe $anime-time linear infinite;
-  // }
-
-  // &::before {
-  //   animation-delay: $anime-time * -0.5;
-  // }
-
-  // // for debug
-  // &:hover {
-  //   &::after,
-  //   &::before {
-  //     background-color: rgba(#f00, 0.3);
-  //   }
-  // }
 }
 
-// @keyframes clipMe {
-//   0%,
-//   100% {
-//     clip: rect(0px, $clip-size, $path-width, 0px);
-//   }
-//   25% {
-//     clip: rect(0px, $path-width, $clip-size, 0px);
-//   }
-//   50% {
-//     clip: rect($clip-size - $path-width, $clip-size, $clip-size, 0px);
-//   }
-//   75% {
-//     clip: rect(0px, $clip-size, $clip-size, $clip-size - $path-width);
-//   }
-// }
-
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1025px) {
   #chat_embed {
     display: none;
+  }
+
+  #user-info-links {
+    visibility: hidden;
+  }
+
+  #watch-me iframe {
+    width: 90vw;
+    height: 60vw;
   }
 }

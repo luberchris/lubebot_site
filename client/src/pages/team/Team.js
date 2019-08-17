@@ -21,17 +21,7 @@ class Team extends Component {
     return (
       <div id="page-team">
         <Navbar />
-        <div id="team-section">
-          <div className="card" id="drew-card">
-            DrewbertDoo
-          </div>
-          <div className="card" id="keelan-card">
-            Keeelaan
-          </div>
-          <div className="card" id="luber-card">
-            Lubesy
-          </div>
-        </div>
+        UNDER CONSTRUCTION
         <Footer />
       </div>
     );

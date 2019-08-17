@@ -3,6 +3,9 @@ import Navbar from "../../partials/navbar/Navbar";
 import Footer from "../../partials/footer/Footer";
 import "./page.scss";
 
+let axios = require("axios");
+let cheerio = require("cheerio");
+
 class Page extends Component {
   constructor(props) {
     super(props);
@@ -16,19 +19,29 @@ class Page extends Component {
     const {
       match: { params }
     } = this.props;
+    this.setState({ user: params.user });
 
-    // let embed;
+    // embed Twitch player
     const script = document.createElement("script");
     script.setAttribute("src", "https://embed.twitch.tv/embed/v1.js");
-    // script.addEventListener("load", () => {
-    //   embed = new window.Twitch.Embed(this.props.targetID, {
-    //     ...this.props,
-    //     channel: params.user
-    //   });
-    // });
     document.body.appendChild(script);
 
-    this.setState({ user: params.user });
+    //web scraper for specific page
+    axios
+      .get(`https://api.twitter.com/1.1/search/tweets.json`)
+      .then(res => {
+        console.log(`twitch.tv axios response: \n` + res.data);
+      })
+      .catch(err => {
+        if (err) {
+          console.log("componentDidMount fault: \n" + err);
+        }
+      });
+    // axios.request("https://twitter.com").then((error, response, html) => {
+    //   if (!error && response.statusCode === 200) {
+    //     console.log(html);
+    //   }
+    // });
   }
 
   componentWillUnmount() {}
@@ -39,7 +52,7 @@ class Page extends Component {
         <Navbar page={this.state.user} />
         <div id="watch-me">
           <iframe
-          id="stream-view"
+            id="stream-view"
             title="stream_view"
             src={`https://player.twitch.tv/?channel=${this.state.user}`}
             height="540"
@@ -60,7 +73,7 @@ class Page extends Component {
         </div>
 
         {/* Pull assigned pages for each person */}
-        <div className="page-section">
+        <div className="page-section" id="user-info-links">
           <a href={`/dads/${this.state.user}/charity`} className="link">
             Charity
           </a>
