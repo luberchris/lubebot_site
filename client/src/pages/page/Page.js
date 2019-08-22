@@ -11,7 +11,8 @@ class Page extends Component {
     super(props);
     this.state = {
       auth: false,
-      user: ""
+      user: "",
+      page_id: ""
     };
   }
 
@@ -26,22 +27,23 @@ class Page extends Component {
     script.setAttribute("src", "https://embed.twitch.tv/embed/v1.js");
     document.body.appendChild(script);
 
+    //initialize Twitch API
+    let client_id = "2jhwmlwhkjjbg2ild7lviuoyy7vsf8";
+    let helix = axios.create({
+      baseURL: "https://api.twitch.tv/helix/",
+      headers: { "Client-ID": client_id }
+    });
+
     //web scraper for specific page
-    axios
-      .get(`https://api.twitter.com/1.1/search/tweets.json`)
-      .then(res => {
-        console.log(`twitch.tv axios response: \n` + res.data);
+
+    helix
+      .get(`users?login=${params.user}`)
+      .then(response => {
+        this.setState({ page_id: response.data.data[0].id });
       })
       .catch(err => {
-        if (err) {
-          console.log("componentDidMount fault: \n" + err);
-        }
+        console.log(err);
       });
-    // axios.request("https://twitter.com").then((error, response, html) => {
-    //   if (!error && response.statusCode === 200) {
-    //     console.log(html);
-    //   }
-    // });
   }
 
   componentWillUnmount() {}
@@ -50,6 +52,7 @@ class Page extends Component {
     return (
       <div id="page-page">
         <Navbar page={this.state.user} />
+        <p className="testing">{this.state.page_id}</p>
         <div id="watch-me">
           <iframe
             id="stream-view"
