@@ -74,6 +74,7 @@ class Giveaway extends Component {
                 <h2>PAST WINNERS</h2>
                 <ul>
                   <li>ealonmann</li>
+                  <li>hasagiotp</li>
                 </ul>
               </div>
             </div>
