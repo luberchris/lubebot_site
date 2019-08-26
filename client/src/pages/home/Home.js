@@ -44,13 +44,13 @@ class Home extends Component {
         <h1 id="welcome">Team Unofficial</h1>
 
         <div id="home-team">
-          <a className="slide-link" href="/drewbertdoo" id="drewbertdoo">
+          <a className="slide-link" href="/stream/drewbertdoo" id="drewbertdoo">
             DrewbertDoo
           </a>
-          <a className="slide-link" href="/keeelaan" id="keeelaan">
+          <a className="slide-link" href="/stream/keeelaan" id="keeelaan">
             Keeelaan
           </a>
-          <a className="slide-link" href="/lubesy" id="lubesy">
+          <a className="slide-link" href="/stream/lubesy" id="lubesy">
             Lubesy
           </a>
         </div>

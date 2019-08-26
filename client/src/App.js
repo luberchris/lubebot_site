@@ -26,8 +26,8 @@ function App() {
         <Route exact path="/gamelist" component={Gamelist} />
         <Route exact path="/giveaway" component={Giveaway} />
         <Route exact path="/animations/:animation" component={Animation} />
-        <Route exact path="/:user" component={Page} />
-        <Route exact path="/:user/:info" component={Info} />
+        <Route exact path="/stream/:user" component={Page} />
+        <Route exact path="/stream/:user/:info" component={Info} />
       </Switch>
     </Router>
   );

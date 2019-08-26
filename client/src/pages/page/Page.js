@@ -77,25 +77,25 @@ class Page extends Component {
 
         {/* Pull assigned pages for each person */}
         <div className="page-section" id="user-info-links">
-          <a href={`/dads/${this.state.user}/charity`} className="link">
+          <a href={`/stream/${this.state.user}/charity`} className="link">
             Charity
           </a>
-          <a href={`/dads/${this.state.user}/about`} className="link">
+          <a href={`/stream/${this.state.user}/about`} className="link">
             About
           </a>
-          <a href={`/dads/${this.state.user}/setup`} className="link">
+          <a href={`/stream/${this.state.user}/setup`} className="link">
             Setup
           </a>
-          <a href={`/dads/${this.state.user}/donate`} className="link">
+          <a href={`/stream/${this.state.user}/donate`} className="link">
             Donate
           </a>
-          <a href={`/dads/${this.state.user}/rules`} className="link">
+          <a href={`/stream/${this.state.user}/rules`} className="link">
             Rules
           </a>
-          <a href={`/dads/${this.state.user}/social`} className="link">
+          <a href={`/stream/${this.state.user}/social`} className="link">
             Social
           </a>
-          <a href={`/dads/${this.state.user}/faq`} className="link">
+          <a href={`/stream/${this.state.user}/faq`} className="link">
             FAQ
           </a>
         </div>

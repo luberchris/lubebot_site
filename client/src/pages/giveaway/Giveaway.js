@@ -235,39 +235,6 @@ class Giveaway extends Component {
               </div>
             </div>
           </div>
-          <div className="game-row">
-            <div className="game-card">
-              <p>Yoku's Island Express</p>
-              {/* change me */}
-              <img
-                className="game-window"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Yoku%27s_Island_Express_cover.png/220px-Yoku%27s_Island_Express_cover.png"
-                alt=""
-                title="Meet Yoku, the pint-sized postman protagonist of Yoku's Island Express! Use a unique blend of pinball mechanics, platforming and open world exploration to unlock the secrets of Mokumana Island, help the locals, awaken ancient deities and much more in this amazing new tropical adventure!"
-              />
-              {/* change me x2 */}
-              <div className="media-wrapper">
-                <a
-                  className="game-preview"
-                  href="https://www.youtube.com/watch?v=-myLEJwAydw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* change me */}
-                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-                </a>
-                <a
-                  className="game-preview"
-                  href="https://store.steampowered.com/app/334940/Yokus_Island_Express/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* change me */}
-                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
 
         <Footer />
