@@ -75,25 +75,27 @@ class Giveaway extends Component {
                 <ul>
                   <li>ealonmann</li>
                   <li>hasagiotp</li>
+                  <li>lessthandennis</li>
+                  <li>keeelaan</li>
                 </ul>
               </div>
             </div>
           </div>
           <div className="game-row">
             <div className="game-card">
-              <p>Surviving Mars</p>
+              <p>God's Trigger</p>
               {/* change me */}
               <img
                 className="game-window"
-                src="https://www.mobygames.com/images/covers/l/462054-surviving-mars-first-colony-edition-xbox-one-front-cover.jpg"
+                src="https://www.mobygames.com/images/covers/l/553746-god-s-trigger-xbox-one-front-cover.jpg"
                 alt=""
-                title="There will be challenges to overcome. Execute your strategy and improve your colony’s chances of survival while unlocking the mysteries of this alien world. Are you ready? Mars is waiting for you."
+                title="Slay enemies with speed and precision in an over-the-top show of blood and explosions. Play solo or with others, make split-second decisions, dodge bullets, and use weapons and abilities to inflict violence in the most graphic way possible."
               />
               {/* change me x2 */}
               <div className="media-wrapper">
                 <a
                   className="game-preview"
-                  href="https://www.youtube.com/watch?v=MnIIJX8cV2M"
+                  href="https://www.youtube.com/watch?v=_2nN26GearI"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -102,7 +104,38 @@ class Giveaway extends Component {
                 </a>
                 <a
                   className="game-preview"
-                  href="https://store.steampowered.com/app/464920/Surviving_Mars/"
+                  href="https://store.steampowered.com/app/488730/Gods_Trigger/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Distance</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://ksr-ugc.imgix.net/assets/004/659/455/1673514ec0a19923dc64d60b3f35914a_original.png?ixlib=rb-2.1.0&w=700&fit=max&v=1444373930&auto=format&frame=1&q=92&s=55ce1746d5e0773c0edcd55d3d80578b"
+                alt=""
+                title="Distance is an atmospheric racing platformer. Fusing futuristic arcade racing with parkour, survive a deadly, mysterious, neon-drenched city by jumping, rotating, and flying."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=p7dp5mwhcl8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/233610/Distance/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -227,6 +260,101 @@ class Giveaway extends Component {
                 <a
                   className="game-preview"
                   href="https://store.steampowered.com/app/703880/Swords_and_Soldiers_2_Shawarmageddon/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="game-row">
+            <div className="game-card">
+              <p>MOTHERGUNSHIP</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://www.mobygames.com/images/covers/l/494697-mothergunship-xbox-one-front-cover.jpg"
+                alt=""
+                title="MOTHERGUNSHIP is a bullet-hell FPS where you craft your own guns, fight gigantic bosses, and defeat a robotic alien armada that conquered Earth. Face off against overwhelming odds in brutal, non-stop combats where thinking on your feet is the only way to survive."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=6DPW5tRU6bo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/574090/MOTHERGUNSHIP/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Slay the Spire</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://www.mobygames.com/images/covers/l/561995-slay-the-spire-playstation-4-front-cover.jpg"
+                alt=""
+                title="We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and Slay the Spire!"
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=9SZUtyYSOjQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/646570/Slay_the_Spire/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Squad (Early Access)</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://steamcdn-a.akamaihd.net/steam/apps/393380/header.jpg?t=1564509716"
+                alt=""
+                title="Squad is a tactical FPS that provides authentic combat experiences through teamwork, communication, and gameplay. It seeks to bridge the large gap between arcade shooter and military simulation. Large scale, combined arms combat, base building, and a great integrated VoIP system."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=wdAiAcXW8z0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/393380/Squad/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

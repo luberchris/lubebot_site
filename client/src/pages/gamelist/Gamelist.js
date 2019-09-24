@@ -1643,6 +1643,23 @@ class Gamelist extends Component {
                 <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
               </a>
             </div>
+            <div className="game-card">
+              <p>Cataclysm: DDA</p>
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/commons/0/01/Cataclysm_logo_square.png"
+                alt=""
+                title="Cataclysm: Dark Days Ahead is a turn-based survival game set in a post-apocalyptic world. Struggle to survive in a harsh, persistent, procedurally generated world. Scavenge the remnants of a dead civilization for food, equipment, or, if you are lucky, a vehicle with a full tank of gas to get you the hell out of Dodge. Fight to defeat or escape from a wide variety of powerful monstrosities, from zombies to giant insects to killer robots and things far stranger and deadlier, and against the others like yourself, that want what you have…"
+              />
+              <a
+                className="game-preview"
+                href="https://www.youtube.com/watch?v=GurxnNDl1AU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+              </a>
+            </div>
           </div>
         </div>
 
