@@ -77,6 +77,7 @@ class Giveaway extends Component {
                   <li>hasagiotp</li>
                   <li>lessthandennis</li>
                   <li>keeelaan</li>
+                  <li>kitreine</li>
                 </ul>
               </div>
             </div>
@@ -114,19 +115,19 @@ class Giveaway extends Component {
               </div>
             </div>
             <div className="game-card">
-              <p>Distance</p>
+              <p>Avernum 3: Ruined World</p>
               {/* change me */}
               <img
                 className="game-window"
-                src="https://ksr-ugc.imgix.net/assets/004/659/455/1673514ec0a19923dc64d60b3f35914a_original.png?ixlib=rb-2.1.0&w=700&fit=max&v=1444373930&auto=format&frame=1&q=92&s=55ce1746d5e0773c0edcd55d3d80578b"
+                src="https://steamcdn-a.akamaihd.net/steam/apps/691830/header.jpg"
                 alt=""
-                title="Distance is an atmospheric racing platformer. Fusing futuristic arcade racing with parkour, survive a deadly, mysterious, neon-drenched city by jumping, rotating, and flying."
+                title="Wander free through this epic, indie fantasy adventure. Explore a huge world that evolves as time passes. Towns fight battles. Refugees flee. Disasters happen. Features cunning adventures, great depth, and unlimited freedom. Be a merchant or bounty hunter, buy a home, save the world!"
               />
               {/* change me x2 */}
               <div className="media-wrapper">
                 <a
                   className="game-preview"
-                  href="https://www.youtube.com/watch?v=p7dp5mwhcl8"
+                  href="https://www.youtube.com/watch?v=w86nnJ3zi3s"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +136,7 @@ class Giveaway extends Component {
                 </a>
                 <a
                   className="game-preview"
-                  href="https://store.steampowered.com/app/233610/Distance/"
+                  href="https://store.steampowered.com/app/691830/Avernum_3_Ruined_World/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -355,6 +356,132 @@ class Giveaway extends Component {
                 <a
                   className="game-preview"
                   href="https://store.steampowered.com/app/393380/Squad/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>BATTLETECH + 2 Expansions</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/0/08/BattleTech_cover.jpg/220px-BattleTech_cover.jpg"
+                alt=""
+                title="Take command of your own mercenary outfit of 'Mechs and the MechWarriors that pilot them, struggling to stay afloat as you find yourself drawn into a brutal interstellar civil war."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=tsIMfOo_VO0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/637090/BATTLETECH/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Override: Mech City Brawl</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://gpstatic.com/acache/41/53/1/us/packshot-d4cc2cffbee27937ced7d68525125b05.jpg"
+                alt=""
+                title="No gears, no glory! Control gigantic robots and duke it out in this 3D mech brawler! Epic battles await in local and online Versus mode, 4-player Co-op – where each player controls one part of a mech – and a single-player game mode. Each mech has its own gameplay style, special moves, and finishers."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=T1IdFwREhyQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/709440/Override_Mech_City_Brawl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="game-row">
+            <div className="game-card">
+              <p>Planet Alpha</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://s2.gaming-cdn.com/images/products/3106/271x377/planet-alpha-cover.jpg"
+                alt=""
+                title="PLANET ALPHA, a beautiful alien world filled with mystery and danger. Pursued by relentless enemies, you must harness the power of night and day as you struggle to survive."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=VbDfgHOVcpY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/485030/PLANET_ALPHA/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Sonic Mania</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://gpstatic.com/acache/32/88/1/us/packshot-72352d14bca26ab7aaf68b9832882eda.jpg"
+                alt=""
+                title="Sonic Mania is an all-new adventure with Sonic, Tails, and Knuckles full of unique bosses, rolling 2D landscapes, and fun classic gameplay."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=ZoXyeFeOXnY"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/584400/Sonic_Mania/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
