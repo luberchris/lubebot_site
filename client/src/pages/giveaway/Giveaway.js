@@ -77,6 +77,7 @@ class Giveaway extends Component {
                   <li>hasagiotp</li>
                   <li>lessthandennis</li>
                   <li>keeelaan</li>
+                  <li>drewbertdoo</li>
                 </ul>
               </div>
             </div>
@@ -114,19 +115,19 @@ class Giveaway extends Component {
               </div>
             </div>
             <div className="game-card">
-              <p>Distance</p>
+              <p>Sonic Mania</p>
               {/* change me */}
               <img
                 className="game-window"
-                src="https://ksr-ugc.imgix.net/assets/004/659/455/1673514ec0a19923dc64d60b3f35914a_original.png?ixlib=rb-2.1.0&w=700&fit=max&v=1444373930&auto=format&frame=1&q=92&s=55ce1746d5e0773c0edcd55d3d80578b"
+                src="https://gpstatic.com/acache/32/88/1/us/packshot-72352d14bca26ab7aaf68b9832882eda.jpg"
                 alt=""
-                title="Distance is an atmospheric racing platformer. Fusing futuristic arcade racing with parkour, survive a deadly, mysterious, neon-drenched city by jumping, rotating, and flying."
+                title="Sonic Mania is an all-new adventure with Sonic, Tails, and Knuckles full of unique bosses, rolling 2D landscapes, and fun classic gameplay."
               />
               {/* change me x2 */}
               <div className="media-wrapper">
                 <a
                   className="game-preview"
-                  href="https://www.youtube.com/watch?v=p7dp5mwhcl8"
+                  href="https://www.youtube.com/watch?v=VYQNnrccbj8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -135,7 +136,7 @@ class Giveaway extends Component {
                 </a>
                 <a
                   className="game-preview"
-                  href="https://store.steampowered.com/app/233610/Distance/"
+                  href="https://store.steampowered.com/app/584400/Sonic_Mania/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -198,37 +199,6 @@ class Giveaway extends Component {
                 <a
                   className="game-preview"
                   href="https://store.steampowered.com/app/951940/Almost_There_The_Platformer/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* change me */}
-                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
-                </a>
-              </div>
-            </div>
-            <div className="game-card">
-              <p>Rising Storm 2: Vietnam</p>
-              {/* change me */}
-              <img
-                className="game-window"
-                src="https://images.g2a.com/newlayout/323x433/1x1x0/641ccfce9e55/59e772025bafe336de4cd894"
-                alt=""
-                title="Red Orchestra Series' take on Vietnam: 64-player MP matches; 20+ maps; US Army & Marines, PAVN/NVA, NLF/VC; Australians and ARVN forces; 50+ weapons; 4 flyable helicopters; mines, traps and tunnels; Brutal. Authentic. Gritty. Character customization. And napalm in the morning."
-              />
-              {/* change me x2 */}
-              <div className="media-wrapper">
-                <a
-                  className="game-preview"
-                  href="https://www.youtube.com/watch?v=YqyeNcNKxXs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {/* change me */}
-                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-                </a>
-                <a
-                  className="game-preview"
-                  href="https://store.steampowered.com/app/418460/Rising_Storm_2_Vietnam/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -333,19 +303,19 @@ class Giveaway extends Component {
               </div>
             </div>
             <div className="game-card">
-              <p>Squad (Early Access)</p>
+              <p>11-11 Memories Retold</p>
               {/* change me */}
               <img
                 className="game-window"
-                src="https://steamcdn-a.akamaihd.net/steam/apps/393380/header.jpg?t=1564509716"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a0/11-11_Memories_Retold_cover_art.jpg/220px-11-11_Memories_Retold_cover_art.jpg"
                 alt=""
-                title="Squad is a tactical FPS that provides authentic combat experiences through teamwork, communication, and gameplay. It seeks to bridge the large gap between arcade shooter and military simulation. Large scale, combined arms combat, base building, and a great integrated VoIP system."
+                title="11th November 1916, a young photographer leaves Canada to join the western front in Europe. The same day, a German technician is told that his son is missing in action. Both want to preserve their humanity and come back alive to their loved ones."
               />
               {/* change me x2 */}
               <div className="media-wrapper">
                 <a
                   className="game-preview"
-                  href="https://www.youtube.com/watch?v=wdAiAcXW8z0"
+                  href="https://www.youtube.com/watch?v=szaxxU6j3D8"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -354,7 +324,321 @@ class Giveaway extends Component {
                 </a>
                 <a
                   className="game-preview"
-                  href="https://store.steampowered.com/app/393380/Squad/"
+                  href="https://store.steampowered.com/app/735580/1111_Memories_Retold/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>CoD: WWII</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/1/18/Call_of_Duty_WWII_Cover_Art.jpg/220px-Call_of_Duty_WWII_Cover_Art.jpg"
+                alt=""
+                title="Call of Duty® returns to its roots with Call of Duty®: WWII - a breathtaking experience that redefines World War II for a new gaming generation."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=a9ITIaKzG3A"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/476600/Call_of_Duty_WWII/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Crash Bandicoot N. Sane Trilogy</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/de/Crash_Bandicoot_N._Sane_Trilogy_cover_art.jpg/220px-Crash_Bandicoot_N._Sane_Trilogy_cover_art.jpg"
+                alt=""
+                title="Your favorite marsupial, Crash Bandicoot™, is back! He’s enhanced, entranced and ready-to-dance with the N. Sane Trilogy. Relive all your favorite moments in Crash Bandicoot™, Crash Bandicoot™ 2: Cortex Strikes Back and Crash Bandicoot™ 3: Warped, now in fully-remastered graphical glory!"
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=r5yAjgP2vnM"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/731490/Crash_Bandicoot_N_Sane_Trilogy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Evergarden</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://www.appunwrapper.com/wp-content/uploads/2018/08/image-548-copy-95.jpg"
+                alt=""
+                title="Escape into a mysterious world of puzzles that will awaken your mind, and quiet your soul."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=DiWOp5BqSjo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/576500/Evergarden/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="game-row">
+            <div className="game-card">
+              <p>Shenmue I & II</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://steamcdn-a.akamaihd.net/steam/apps/758330/capsule_616x353.jpg"
+                alt=""
+                title="SEGA®’s most requested re-release of all time finally comes to a new generation. Shenmue delivers an epic story of revenge within a unique open world that is still unrivalled in depth and detail. Return to the epic saga that defined modern gaming. The saga begins…again."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=l3jkX6XaYa0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/758330/Shenmue_I__II/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Spyro Reignited Trilogy</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://images.g2a.com/newlayout/323x433/1x1x0/6b234b06d72c/5d1092a47e696c77c50b3413"
+                alt=""
+                title="Same sick burns, same smoldering attitude, now all scaled up in stunning HD, Spyro is back in the Spyro™ Reignited Trilogy! Rekindle the fire with remastered versions of the original three games, Spyro™ the Dragon, Spyro™ 2: Ripto's Rage! and Spyro™: Year of the Dragon."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=orzNU1R4wb8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/996580/Spyro_Reignited_Trilogy/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>SYNTHETIK: Legion Rising</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://steamcdn-a.akamaihd.net/steam/apps/528230/header.jpg"
+                alt=""
+                title="SYNTHETIK is an unforgiving shooter rogue-lite in a world overrun by machines. Battle from floor to floor, defeat relentless robotic forces, experience the next level in gun-play and shape your own experience by experimenting with powerful items and modifiers. Can you defeat the Heart of Armageddon?"
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=v5-EYFkf-KU"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/528230/SYNTHETIK_Legion_Rising/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Avernum 3: Ruined World</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://i.ytimg.com/vi/W2Bc6MZrgOc/maxresdefault.jpg"
+                alt=""
+                title="Wander free through this epic, indie fantasy adventure. Explore a huge world that evolves as time passes. Towns fight battles. Refugees flee. Disasters happen. Features cunning adventures, great depth, and unlimited freedom. Be a merchant or bounty hunter, buy a home, save the world!"
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=W2Bc6MZrgOc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/691830/Avernum_3_Ruined_World/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>BATTLETECH + Expansions</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://gpstatic.com/acache/34/94/1/uk/packshot-03ec3dcde3c8da7f5bdcf819e88adeb9.jpg"
+                alt=""
+                title="Take command of your own mercenary outfit of 'Mechs and the MechWarriors that pilot them, struggling to stay afloat as you find yourself drawn into a brutal interstellar civil war."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=tsIMfOo_VO0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/637090/BATTLETECH/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="game-row">
+            <div className="game-card">
+              <p>Override: Mech City Brawl</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="https://steamcdn-a.akamaihd.net/steam/apps/709440/capsule_616x353.jpg"
+                alt=""
+                title="No gears, no glory! Control gigantic robots and duke it out in this 3D mech brawler! Epic battles await in local and online Versus mode, 4-player Co-op – where each player controls one part of a mech – and a single-player game mode. Each mech has its own gameplay style, special moves, and finishers."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=XfNKznj6iYI"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/709440/Override_Mech_City_Brawl/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "steam-square"]} id="steam" />
+                </a>
+              </div>
+            </div>
+            <div className="game-card">
+              <p>Planet Alpha</p>
+              {/* change me */}
+              <img
+                className="game-window"
+                src="http://t1.gstatic.com/images?q=tbn:ANd9GcQN2lTxHtbJB9GwH0pxz0ozNESYdJzOHViPqTb161d62UHEvWnR"
+                alt=""
+                title="PLANET ALPHA, a beautiful alien world filled with mystery and danger. Pursued by relentless enemies, you must harness the power of night and day as you struggle to survive."
+              />
+              {/* change me x2 */}
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=gsS0aE_aO9Q"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {/* change me */}
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://store.steampowered.com/app/485030/PLANET_ALPHA/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
