@@ -3,8 +3,16 @@ import "./navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Navbar extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { user: this.props.user };
+  }
+
   componentDidMount() {
-    console.log(this.props.page);
+    // const {
+    //   match: { params }
+    // } = this.props;
   }
 
   componentWillUnmount() {}
@@ -26,9 +34,9 @@ class Navbar extends Component {
         <div className="navbar-section">
           <a
             href={
-              this.props.page
-                ? "https://www.twitch.tv/" + this.props.page
-                : "https://www.twitch.tv/"
+              `${this.state}`
+                ? `https://www.twitch.tv/${this.state}`
+                : `https://www.twitch.tv/`
             }
             target="_blank"
             rel="noopener noreferrer"

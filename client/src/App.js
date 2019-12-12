@@ -19,15 +19,15 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/team" component={Team} />
-        <Route exact path="/checklist" component={Checklist} />
+        {/* <Route exact path="/" component={Home} /> */}
+        {/* <Route exact path="/team" component={Team} /> */}
+        {/* <Route exact path="/checklist" component={Checklist} /> */}
         {/* <Route exact path="/watch" component={Checklist} /> */}
         <Route exact path="/gamelist" component={Gamelist} />
         <Route exact path="/giveaway" component={Giveaway} />
-        <Route exact path="/animations/:animation" component={Animation} />
-        <Route exact path="/stream/:user" component={Page} />
-        <Route exact path="/stream/:user/:info" component={Info} />
+        {/* <Route exact path="/animations/:animation" component={Animation} /> */}
+        {/* <Route exact path="/stream/:user" component={Page} /> */}
+        {/* <Route exact path="/stream/:user/:info" component={Info} /> */}
       </Switch>
     </Router>
   );

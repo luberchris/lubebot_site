@@ -9,6 +9,7 @@ let cheerio = require("cheerio");
 class Page extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       auth: false,
       user: "",
@@ -20,6 +21,7 @@ class Page extends Component {
     const {
       match: { params }
     } = this.props;
+
     this.setState({ user: params.user });
 
     // embed Twitch player
