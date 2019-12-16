@@ -7,6 +7,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Gamecard from "../../partials/gamecard/Gamecard";
 import Humble from "../../assets/PartnerStampWhite.png";
 
+const redText = {
+  color: "red"
+};
+
 class Giveaway extends Component {
   constructor(props) {
     super(props);
@@ -105,6 +109,22 @@ class Giveaway extends Component {
               video={}
               steampage={}
                           /> */}
+          <div id="warning">
+            <p>
+              If this list appears as black text on a white screen and you are
+              using a laptop, computer, or tablet, zoom this webpage out
+            </p>
+            <p style={redText}>
+              <br />
+              [CTRL/⌘ -] or [CTRL/⌘ Scroll Down]
+            </p>
+            <p>
+              <br />
+              until a detailed webpage appears.
+            </p>
+            <br />
+            <hr />
+          </div>
           <div className="game-row">
             <Gamecard
               name={"Sonic Mania"}

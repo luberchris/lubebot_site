@@ -51,13 +51,9 @@
   text-align: justify;
   margin: 2% auto;
   padding: 2% 10%;
-  background-color: #016C83;
+  background-color: #016c83;
   justify-content: center;
   border-radius: 10px;
-}
-
-#game-intro #yt-s {
-  color: white;
 }
 
 #page-giveaway {
@@ -79,6 +75,10 @@
   width: 2vw;
   color: #1ab7ea;
   padding-top: 1vw;
+}
+
+#warning {
+  visibility: collapse;
 }
 
 #yt-s {
@@ -126,7 +126,14 @@
     visibility: collapse;
     height: 0;
   }
-
+  #warning {
+    visibility: visible;
+    width: 52%;
+    margin: auto;
+    text-align: center;
+    font-size: large;
+    padding-bottom: 4%;
+  }
   #yt-s {
     visibility: collapse;
     height: 0;

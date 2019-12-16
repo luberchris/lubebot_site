@@ -17,12 +17,13 @@
 
 #humble-partner {
   width: 24%;
-  margin-top: 4%;
+  margin-top: 7%;
 }
 
 #tips-and-winners {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 5%;
 }
 
 #tips-section {
