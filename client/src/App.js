@@ -6,14 +6,14 @@ import {
   // Redirect
 } from "react-router-dom";
 import "./App.css";
-import Home from "./pages/home/Home";
-import Page from "./pages/page/Page";
-import Info from "./pages/info/Info";
-import Team from "./pages/team/Team";
-import Checklist from "./pages/checklist/Checklist";
+// import Home from "./pages/home/Home";
+// import Page from "./pages/page/Page";
+// import Info from "./pages/info/Info";
+// import Team from "./pages/team/Team";
+// import Checklist from "./pages/checklist/Checklist";
 import Gamelist from "./pages/gamelist/Gamelist";
 import Giveaway from "./pages/giveaway/Giveaway";
-import Animation from "./pages/animation/Animation";
+// import Animation from "./pages/animation/Animation";
 
 function App() {
   return (

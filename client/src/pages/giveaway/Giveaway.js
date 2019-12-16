@@ -5,6 +5,7 @@ import "../gamelist/gamelist.css";
 import "./giveaway.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Gamecard from "../../partials/gamecard/Gamecard";
+import Humble from "../../assets/PartnerStampWhite.png";
 
 class Giveaway extends Component {
   constructor(props) {
@@ -84,6 +85,17 @@ class Giveaway extends Component {
                   <li>ealonmann</li>
                 </ul>
               </div>
+              <div id="humble-partner">
+                <a
+                  href={
+                    "https://www.humblebundle.com/subscription?partner=lubesy&charity=1474961"
+                  }
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img id="humble-logo" src={Humble} />
+                </a>
+              </div>
             </div>
           </div>
           {/* <Gamecard
@@ -161,19 +173,6 @@ class Giveaway extends Component {
             />
           </div>
           <div className="game-row">
-            <Gamecard
-              name={"Slay the Spire"}
-              image={
-                "https://www.mobygames.com/images/covers/l/561995-slay-the-spire-playstation-4-front-cover.jpg"
-              }
-              description={
-                "We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and Slay the Spire!"
-              }
-              video={"https://www.youtube.com/watch?v=9SZUtyYSOjQ"}
-              steampage={
-                "https://store.steampowered.com/app/646570/Slay_the_Spire/"
-              }
-            />
             <Gamecard
               name={"11-11 Memories Retold"}
               image={
@@ -268,17 +267,6 @@ class Giveaway extends Component {
               }
             />
             <Gamecard
-              name={"Avernum 3: Ruined World"}
-              image={"https://i.ytimg.com/vi/W2Bc6MZrgOc/maxresdefault.jpg"}
-              description={
-                "Wander free through this epic, indie fantasy adventure. Explore a huge world that evolves as time passes. Towns fight battles. Refugees flee. Disasters happen. Features cunning adventures, great depth, and unlimited freedom. Be a merchant or bounty hunter, buy a home, save the world!"
-              }
-              video={"https://www.youtube.com/watch?v=W2Bc6MZrgOc"}
-              steampage={
-                "https://store.steampowered.com/app/691830/Avernum_3_Ruined_World/"
-              }
-            />
-            <Gamecard
               name={"BATTLETECH + Expansions"}
               image={
                 "https://gpstatic.com/acache/34/94/1/uk/packshot-03ec3dcde3c8da7f5bdcf819e88adeb9.jpg"
@@ -303,6 +291,97 @@ class Giveaway extends Component {
               steampage={
                 "https://store.steampowered.com/app/709440/Override_Mech_City_Brawl/"
               }
+            />
+            <Gamecard
+              name={"Yakuza Kiwami"}
+              image={
+                "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Yakuza_Kiwami_cover.jpg/220px-Yakuza_Kiwami_cover.jpg"
+              }
+              description={
+                "SEGA’s critically-acclaimed entry that started a legend. Become Kazuma Kiryu, an up-and-coming yakuza who takes the fall for the murder of a crime boss, only to emerge from prison ten years later to a changed world. Remastered from the ground up, now in 4K and uncapped framerates on PC."
+              }
+              video={"https://www.youtube.com/watch?v=BBGgdnN-CjM"}
+              steampage={
+                "https://store.steampowered.com/app/834530/Yakuza_Kiwami/"
+              }
+            />
+          </div>
+          <div className="game-row">
+            <Gamecard
+              name={"Sword Legacy: Omen"}
+              image={"https://i.ytimg.com/vi/CRO2FGmr3N4/maxresdefault.jpg"}
+              description={
+                "Embark on a brutal re-imagining of the King Arthur mythos as Uther, a vengeful knight aided by Merlin, an eldritch sorcerer, in search of the long-lost Excalibur. Survive intense turn-based combat in this tactical RPG as you travel Broken Britannia, a land devastated by intrigue and deceit."
+              }
+              video={"https://www.youtube.com/watch?v=jUAKvfDi_yc"}
+              steampage={
+                "https://store.steampowered.com/app/690140/Sword_Legacy_Omen/"
+              }
+            />
+            <Gamecard
+              name={"Soulcalibur VI"}
+              image={
+                "https://s2.gaming-cdn.com/images/products/3157/271x377/soulcalibur-vi-cover.jpg"
+              }
+              description={
+                "Bring more than your fists to the fight! Featuring all-new battle mechanics and characters, SOULCALIBUR VI marks a new era of the historic franchise. Welcome back to the stage of history!"
+              }
+              video={"https://www.youtube.com/watch?v=m1sdAmSq4vs"}
+              steampage={
+                "https://store.steampowered.com/app/544750/SOULCALIBUR_VI/"
+              }
+            />
+            <Gamecard
+              name={"Regular Human Basketball"}
+              image={
+                "https://img.itch.zone/aW1nLzEzNzU4MTUuZ2lm/original/uZwZkd.gif"
+              }
+              description={
+                "Ready to play some ball? Grab a team, suit up, and climb inside your human! Prep its thrusters, lower the all-terrain wheels, and spin up that flailing magnet-arm. It's time to play Regular Human Basketball!"
+              }
+              video={"https://www.youtube.com/watch?v=ZPB_me25O94"}
+              steampage={
+                "https://store.steampowered.com/app/661940/Regular_Human_Basketball/"
+              }
+            />
+            <Gamecard
+              name={"My Time at Portia"}
+              image={
+                "https://s2.gaming-cdn.com/images/products/2383/271x377/my-time-at-portia-cover.jpg"
+              }
+              description={
+                "Start a new life in the enchanting town of Portia! Restore your Pa's neglected workshop to its former glory by fulfilling commissions, growing crops, raising animals, and befriending the quirky inhabitants of this charming post-apocalyptic land!"
+              }
+              video={"https://www.youtube.com/watch?v=XrWc99nyTlo"}
+              steampage={
+                "https://store.steampowered.com/app/666140/My_Time_At_Portia/"
+              }
+            />
+            <Gamecard
+              name={"Fluffy Horde"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/777880/header.jpg?t=1541611931"
+              }
+              description={
+                "Fluffy Horde is a 2D side-scrolling hybrid between real-time strategy and tower defense. The game revolves around a magical hyper-breeding bunny horde created by a misunderstood Shaman wanderer!"
+              }
+              video={"https://www.youtube.com/watch?v=vwfmxckfnJs"}
+              steampage={
+                "https://store.steampowered.com/app/777880/Fluffy_Horde/"
+              }
+            />
+          </div>
+          <div className="game-row">
+            <Gamecard
+              name={"Chasm"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/312200/capsule_467x181.jpg"
+              }
+              description={
+                "Explore the depths below a remote mountain town in this procedurally-generated Adventure Platformer. Taking inspiration from hack 'n slash dungeon crawlers and Metroidvania-style platformers, Chasm will immerse you in a fantasy world full of exciting treasure, deadly enemies, and abundant secrets."
+              }
+              video={"https://www.youtube.com/watch?v=zUqIIQJkoyA"}
+              steampage={"https://store.steampowered.com/app/312200/Chasm/"}
             />
           </div>
         </div>

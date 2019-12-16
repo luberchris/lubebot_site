@@ -1598,14 +1598,24 @@ class Gamelist extends Component {
                 alt=""
                 title="Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts."
               />
-              <a
-                className="game-preview"
-                href="https://www.youtube.com/watch?v=innmNewjkuk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-              </a>
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=innmNewjkuk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://www.twitch.tv/collections/Q-uIW3iZwRXYVA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" />
+                </a>
+              </div>
             </div>
             <div className="game-card">
               <p>Fallout Nuclear Winter</p>
