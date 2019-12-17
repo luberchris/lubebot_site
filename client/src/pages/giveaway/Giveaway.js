@@ -312,19 +312,6 @@ class Giveaway extends Component {
                 "https://store.steampowered.com/app/709440/Override_Mech_City_Brawl/"
               }
             />
-            <Gamecard
-              name={"Yakuza Kiwami"}
-              image={
-                "https://upload.wikimedia.org/wikipedia/en/thumb/0/02/Yakuza_Kiwami_cover.jpg/220px-Yakuza_Kiwami_cover.jpg"
-              }
-              description={
-                "SEGA’s critically-acclaimed entry that started a legend. Become Kazuma Kiryu, an up-and-coming yakuza who takes the fall for the murder of a crime boss, only to emerge from prison ten years later to a changed world. Remastered from the ground up, now in 4K and uncapped framerates on PC."
-              }
-              video={"https://www.youtube.com/watch?v=BBGgdnN-CjM"}
-              steampage={
-                "https://store.steampowered.com/app/834530/Yakuza_Kiwami/"
-              }
-            />
           </div>
           <div className="game-row">
             <Gamecard
