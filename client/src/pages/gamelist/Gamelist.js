@@ -4,6 +4,10 @@ import Footer from "../../partials/footer/Footer";
 import "./gamelist.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+const redText = {
+  color: "red"
+};
+
 class Gamelist extends Component {
   constructor(props) {
     super(props);
@@ -56,6 +60,22 @@ class Gamelist extends Component {
                 <a href="/giveaway">here</a>
               </li>
             </ol>
+          </div>
+          <div id="warning">
+            <p>
+              If this list appears as black text on a white screen and you are
+              using a laptop, computer, or tablet, zoom this webpage out
+            </p>
+            <p style={redText}>
+              <br />
+              [CTRL/⌘ -] or [CTRL/⌘ Scroll Down]
+            </p>
+            <p>
+              <br />
+              until a detailed webpage appears.
+            </p>
+            <br />
+            <hr />
           </div>
           <div className="game-row">
             <div className="game-card">
@@ -267,23 +287,6 @@ class Gamelist extends Component {
               <a
                 className="game-preview"
                 href="https://www.youtube.com/watch?v=27Le3kOOFQk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-              </a>
-            </div>
-            <div className="game-card">
-              <p>Blades of Time</p>
-              <img
-                className="game-window"
-                src="https://media.moddb.com/images/games/1/20/19127/Blades-of-Time-OE-NR.jpg"
-                alt=""
-                title="Ayumi, the gorgeous gun and sword-wielding treasure hunter, sets out on a journey to an ancient island in search of new adventures. While rich in bounty, the island is also filled with the magic of Chaos, being at the same time home to blood thirsty monsters."
-              />
-              <a
-                className="game-preview"
-                href="https://www.youtube.com/watch?v=F1Pdt2JbsDw"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1113,23 +1116,6 @@ class Gamelist extends Component {
                 </a>
               </div>
             </div>
-            <div className="game-card">
-              <p>Puzzle Kingdoms</p>
-              <img
-                className="game-window"
-                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Puzzle_Kingdoms_Coverart.png/220px-Puzzle_Kingdoms_Coverart.png"
-                alt=""
-                title="Puzzle Kingdoms challenges players to plan out strategic attacks in order to defeat their opponents. Order troops across the map, conquering cities through innovative puzzle gameplay. Players build and manage armies led by heroic commanders to save the world of Etheria from the brink of destruction."
-              />
-              <a
-                className="game-preview"
-                href="https://www.youtube.com/watch?v=4hdCcvSMEwQ"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-              </a>
-            </div>
           </div>
           <div className="game-row">
             <div className="game-card">
@@ -1365,6 +1351,8 @@ class Gamelist extends Component {
                 <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
               </a>
             </div>
+          </div>
+          <div className="game-row">
             <div className="game-card">
               <p>Trine</p>
               <img
@@ -1382,8 +1370,6 @@ class Gamelist extends Component {
                 <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
               </a>
             </div>
-          </div>
-          <div className="game-row">
             <div className="game-card">
               <p>Trine 2</p>
               <img
@@ -1598,14 +1584,24 @@ class Gamelist extends Component {
                 alt=""
                 title="Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts."
               />
-              <a
-                className="game-preview"
-                href="https://www.youtube.com/watch?v=innmNewjkuk"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
-              </a>
+              <div className="media-wrapper">
+                <a
+                  className="game-preview"
+                  href="https://www.youtube.com/watch?v=innmNewjkuk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+                </a>
+                <a
+                  className="game-preview"
+                  href="https://www.twitch.tv/collections/Q-uIW3iZwRXYVA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FontAwesomeIcon icon={["fab", "twitch"]} id="twitch" />
+                </a>
+              </div>
             </div>
             <div className="game-card">
               <p>Fallout Nuclear Winter</p>
@@ -1654,6 +1650,40 @@ class Gamelist extends Component {
               <a
                 className="game-preview"
                 href="https://www.youtube.com/watch?v=GurxnNDl1AU"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+              </a>
+            </div>
+            <div className="game-card">
+              <p>Puzzle Kingdoms</p>
+              <img
+                className="game-window"
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d3/Puzzle_Kingdoms_Coverart.png/220px-Puzzle_Kingdoms_Coverart.png"
+                alt=""
+                title="Puzzle Kingdoms challenges players to plan out strategic attacks in order to defeat their opponents. Order troops across the map, conquering cities through innovative puzzle gameplay. Players build and manage armies led by heroic commanders to save the world of Etheria from the brink of destruction."
+              />
+              <a
+                className="game-preview"
+                href="https://www.youtube.com/watch?v=4hdCcvSMEwQ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FontAwesomeIcon icon={["fab", "youtube-square"]} id="yt-s" />
+              </a>
+            </div>
+            <div className="game-card">
+              <p>Blades of Time</p>
+              <img
+                className="game-window"
+                src="https://media.moddb.com/images/games/1/20/19127/Blades-of-Time-OE-NR.jpg"
+                alt=""
+                title="Ayumi, the gorgeous gun and sword-wielding treasure hunter, sets out on a journey to an ancient island in search of new adventures. While rich in bounty, the island is also filled with the magic of Chaos, being at the same time home to blood thirsty monsters."
+              />
+              <a
+                className="game-preview"
+                href="https://www.youtube.com/watch?v=F1Pdt2JbsDw"
                 target="_blank"
                 rel="noopener noreferrer"
               >
