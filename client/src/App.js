@@ -14,6 +14,7 @@ import "./App.css";
 import Gamelist from "./pages/gamelist/Gamelist";
 import Giveaway from "./pages/giveaway/Giveaway";
 // import Animation from "./pages/animation/Animation";
+import Blizz from "./pages/blizz/Blizz";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         {/* <Route exact path="/animations/:animation" component={Animation} /> */}
         {/* <Route exact path="/stream/:user" component={Page} /> */}
         {/* <Route exact path="/stream/:user/:info" component={Info} /> */}
+        <Route exact path="/blizzImage" component={Blizz} />
       </Switch>
     </Router>
   );
