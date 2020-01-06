@@ -390,6 +390,109 @@ class Giveaway extends Component {
               video={"https://www.youtube.com/watch?v=zUqIIQJkoyA"}
               steampage={"https://store.steampowered.com/app/312200/Chasm/"}
             />
+            <Gamecard
+              name={"Blasphemous"}
+              image={
+                "https://www.mobygames.com/images/covers/l/589838-blasphemous-nintendo-switch-front-cover.jpg"
+              }
+              description={
+                "Blasphemous is a punishing action-platformer that combines the fast-paced, skilled combat of a hack-n-slash game with a deep and evocative narrative core, delivered through exploration of a huge universe comprised of non-linear levels."
+              }
+              video={"https://www.youtube.com/watch?v=Ctm-GClM6wo"}
+              steampage={"https://store.steampowered.com/app/774361/Blasphemous/"}
+            />
+            <Gamecard
+              name={"Ancestors Legacy"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/620590/header.jpg?t=1573829537"
+              }
+              description={
+                "Ancestors Legacy is a squad-based real time strategy with a strong focus on tactics. Inspired by medieval European history, it brings to life four different nations and their conflicts, usually solved by war."
+              }
+              video={"https://www.youtube.com/watch?v=cIL2fnxKBIE"}
+              steampage={"https://store.steampowered.com/app/620590/Ancestors_Legacy/"}
+            />
+            <Gamecard
+              name={"Phantom Doctrine"}
+              image={
+                "https://gpstatic.com/acache/37/42/1/us/t620x300-fbaa74c4c8500e3c00c065cdb63ff3dd.jpg"
+              }
+              description={
+                "The year is 1983. The world teeters on the verge of destruction as the Cold War tightens its icy grip. East or West: trust no one, question everything. The fate of humanity rests in your hands as you pit spy versus spy in tactical Phantom Doctrine."
+              }
+              video={"https://www.youtube.com/watch?v=YEEQ4B2o-5s"}
+              steampage={"https://store.steampowered.com/app/559100/Phantom_Doctrine/"}
+            />
+            <Gamecard
+              name={"Dead in Vinland"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/573120/header.jpg?t=1548175094"
+              }
+              description={
+                "DEAD IN VINLAND is a survival/management game, mixed with RPG and adventure elements, about a Viking family trying their best to survive on a mysterious island."
+              }
+              video={"https://www.youtube.com/watch?v=m07unNZECGY"}
+              steampage={"https://store.steampowered.com/app/573120/Dead_In_Vinland/"}
+            />
+          </div>
+          <div className="game-row">
+          <Gamecard
+              name={"Horizon Chase Turbo"}
+              image={
+                "https://pbs.twimg.com/profile_images/985870516966871041/my-JQFa4.jpg"
+              }
+              description={
+                "Thrilling arcade racing game, inspired by the super-fun-straight-to-the-point classic racing games from the 90s."
+              }
+              video={"https://www.youtube.com/watch?v=SNL3RhmXPh4"}
+              steampage={"https://store.steampowered.com/app/389140/Horizon_Chase_Turbo/"}
+            />
+            <Gamecard
+              name={"Dark Future: Blood Red States"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/370870/header.jpg?t=1575542859"
+              }
+              description={
+                "Step into the extraordinary, dystopian world of Dark Future, filled with danger, chaos and adventure. A game of both action and strategy unlike any other, featuring a unique time dilating command mode to help you make tactical decisions on the dangerous highways of this world."
+              }
+              video={"https://www.youtube.com/watch?v=xglFrwQmK1w"}
+              steampage={"https://store.steampowered.com/app/370870/Dark_Future_Blood_Red_States/"}
+            />
+            <Gamecard
+              name={"X-Morph: Defense"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/408410/header.jpg?t=1575549191"
+              }
+              description={
+                "Unique fusion of a top-down shooter and tower defense strategy. You are the invader! Use destructive weapons or lead your enemies into a maze of towers. Strategize in the build mode by carefully selecting various types of alien towers or throw yourself right into the heat of the battle."
+              }
+              video={"https://www.youtube.com/watch?v=zpAd1b6kFx4"}
+              steampage={"https://store.steampowered.com/app/408410/XMorph_Defense/"}
+            />
+            <Gamecard
+              name={"Aegis Defenders"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steam/apps/371140/header.jpg?t=1561330184"
+              }
+              description={
+                "Take on wild beasts, ruthless soldiers, and ancient gods in this 2D Action-Platformer inspired by Tower-Defense combat."
+              }
+              video={"https://www.youtube.com/watch?v=lQdsTqHBIlQ"}
+              steampage={"https://store.steampowered.com/app/371140/Aegis_Defenders/"}
+            />
+          </div>
+          <div className="game-row">
+          <Gamecard
+              name={"Desert Child"}
+              image={
+                "https://steamcdn-a.akamaihd.net/steamcommunity/public/images/apps/844050/5dba2405134afb70adfe901c2c98649a6f264ec0.jpg"
+              }
+              description={
+                "You are a hungry, young hoverbike racer who needs to get off Earth before it E-X-P-L-O-D-E-S. Hunt bounties, throw races, and do whatever you can to get to Mars and win the Grand Prix."
+              }
+              video={"https://www.youtube.com/watch?v=h_g2ikGNTjM"}
+              steampage={"https://store.steampowered.com/app/844050/Desert_Child/"}
+            />
           </div>
         </div>
 
