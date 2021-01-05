@@ -4,7 +4,7 @@
   "description": "website for LubeChatBot, for use by friends and viewers",
   "main": "server.js",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.3",
     "concurrently": "^4.1.0",
     "dotenv": "^8.0.0",
